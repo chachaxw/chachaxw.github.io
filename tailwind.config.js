@@ -1,5 +1,7 @@
 const customColor = {
-  primary: '#05C4D2',
+  primary: '#ff0844',
+  secondary: '#4bbcaf',
+  'light-gray': '#f7f7f6',
 };
 
 module.exports = {
