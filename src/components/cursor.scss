@@ -1,0 +1,25 @@
+@media (any-pointer: fine) {
+  .cursor {
+    z-index: 999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .cursor-inner {
+    stroke-width: 4;
+    fill: var(--cursor-fill);
+    stroke: var(--cursor-stroke);
+    stroke-width: var(--cursor-stroke-width);
+  }
+
+  .cursor-dot {
+    fill: #fff;
+    stroke: #fff;
+    opacity: 0.65;
+    transform-origin: center;
+  }
+}
