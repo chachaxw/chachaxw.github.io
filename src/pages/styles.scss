@@ -1,0 +1,38 @@
+.bg-img {
+  background: no-repeat center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-image: url(../assets/images/work.jpeg);
+}
+
+.self-img {
+  opacity: 0.5;
+  background: no-repeat center;
+  background-size: cover;
+  background-image: url(../assets/images/zhouwei.jpg);
+}
+
+.text-bg-animate {
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    background: var(--color-link);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+}
