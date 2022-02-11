@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "glsl-canvas.extensions": [
+    "EXT_shader_texture_lod"
+  ]
 }
