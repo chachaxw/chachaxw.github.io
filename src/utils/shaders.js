@@ -34,7 +34,7 @@ export const fragment = /* 片段着色器 */ `
   float PI = 3.141592653589793238;
   
   void main() {
-    vec2 newUV = (vUv - vec2(0.5)) * resolution.zw + vec2(0.5);
+    vec2 newUV = (vUv - vec2(0.5)) * resolution.w + vec2(0.5);
     vec4 color = texture2D(uTexture, newUV);
     vec4 offset = texture2D(uDataTexture, vUv);
     gl_FragColor = vec4(vUv, 0.0, 1.0);
