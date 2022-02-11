@@ -1,0 +1,142 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Circular-Loom';
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Circular-Loom';
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: 'Circular-Loom';
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style: normal;
+  font-family: 'Circular-Loom';
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2')
+    format('woff2');
+}
+
+body {
+  --color-text: #252528;
+  --color-bg: #f8eae3;
+  --color-link: #ff0844;
+  --color-link-hover: rgba(255, 8, 68, 0.7);
+  --color-menu-text: #252528;
+  --color-bg-move: #afb6bc;
+
+  /* Cursor styles */
+  --cursor-stroke: #ffffff;
+  --cursor-fill: none;
+  --cursor-stroke-width: 1px;
+
+  color: var(--color-text);
+  /* background-color: var(--color-bg); */
+  font-family: 'Circular-Loom', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* cursor: none; */
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+  outline: 0;
+}
+
+.logo {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  border-radius: 999px;
+  background-image: conic-gradient(from 1.5708rad at 50% 50%, #ffb199 0%, #ff0844 100%);
+  box-shadow: 0 8px 40px 0 rgba(72, 8, 25, 0.15);
+}
+
+.typing.animate {
+  width: 21ch;
+  border-right: 0.1em solid black;
+  font-family: monospace;
+  font-size: 2em;
+  animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.5s steps(5) 2.5s, type2 1s steps(4) 3s forwards,
+    type3 3s steps(22, end) 6s forwards;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.typing.animate::before {
+  content: "Hello, I'm Chacahaa";
+  animation: type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21ch;
+  }
+}
+
+@keyframes type2 {
+  from {
+    width: 16ch;
+    content: "Hello, I'm Chacha, ";
+  }
+  to {
+    width: 20ch;
+    content: "Hello, I'm Chacha, ";
+  }
+}
+
+@keyframes type3 {
+  from {
+    width: 20ch;
+    content: "Hello, I'm Chacha, a front-end developer with over 7 years experience!";
+  }
+  to {
+    width: 42ch;
+    content: "Hello, I'm Chacha, a front-end developer with over 7 years experience!";
+  }
+}
+
+@keyframes writer {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes delete {
+  from {
+    width: 21ch;
+  }
+  to {
+    width: 16ch;
+  }
+}
