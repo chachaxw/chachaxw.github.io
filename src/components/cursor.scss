@@ -21,5 +21,6 @@
     stroke: #fff;
     opacity: 0.65;
     transform-origin: center;
+    transition: transform 0.125s ease-in;
   }
 }

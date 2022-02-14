@@ -10,11 +10,4 @@
     text-fill-color: var(--color-link);
     color: var(--color-link);
   }
-
-  span {
-    display: inline-block;
-    white-space: pre;
-    pointer-events: none;
-    will-change: transform;
-  }
 }

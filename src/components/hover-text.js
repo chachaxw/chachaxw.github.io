@@ -25,52 +25,50 @@ const HoverText = ({ text }) => {
   lastY = docY;
 
   useEffect(() => {
-    if (textRef.current) {
-      charming(textRef.current);
+    charming(textRef.current);
 
-      const lettersTotal = textRef.current.children.length;
+    const lettersTotal = textRef.current.children.length;
 
-      totalRandomLetters = totalRandomLetters <= lettersTotal ? totalRandomLetters : lettersTotal;
-      // The amount that they move (y-axis)
-      lettersTranslations = Array.from(
+    totalRandomLetters = totalRandomLetters <= lettersTotal ? totalRandomLetters : lettersTotal;
+    // The amount that they move (y-axis)
+    lettersTranslations = Array.from(
+      {
+        length: totalRandomLetters,
+      },
+      (_) => {
+        const tr = MathUtils.getRandomFloat(0, 10);
+        return [-tr, tr];
+      }
+    );
+    lettersRotations = Array.from(
+      {
+        length: totalRandomLetters,
+      },
+      (_) => {
+        const rr = MathUtils.getRandomFloat(0, 6);
+        return [-rr, rr];
+      }
+    );
+
+    tl.current
+      .from(
+        textRef.current.children,
         {
-          length: totalRandomLetters,
+          scale: 0,
+          opacity: 0,
+          y: '100%',
         },
-        (_) => {
-          const tr = MathUtils.getRandomFloat(0, 10);
-          return [-tr, tr];
-        }
-      );
-      lettersRotations = Array.from(
-        {
-          length: totalRandomLetters,
-        },
-        (_) => {
-          const rr = MathUtils.getRandomFloat(0, 6);
-          return [-rr, rr];
-        }
-      );
-
-      tl.current
-        .from(
-          textRef.current.children,
-          {
-            scale: 0,
-            opacity: 0,
-            y: '100%',
-          },
-          0.25
-        )
-        .to(textRef.current.children, {
-          stagger: { each: 0.1 },
-          duration: 0.3,
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          ease: 'power4.out',
-        });
-    }
-  }, [textRef.current]);
+        0.25
+      )
+      .to(textRef.current.children, {
+        stagger: { each: 0.1 },
+        duration: 0.3,
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        ease: 'power4.out',
+      });
+  }, []);
 
   const tilt = () => {
     // Document scrolls
@@ -131,7 +129,7 @@ const HoverText = ({ text }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       ref={mergeRefs([ref, textRef])}
-      className="hover-text absolute top-1/2 left-1/2 text-9xl font-bold -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
+      className="hover-text charming-text absolute top-1/2 left-1/2 text-9xl font-bold -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
     >
       {text}
     </a>

@@ -22,8 +22,10 @@
   pointer-events: none;
   border-radius: 50%;
   opacity: 0.4;
-  background: var(--color-link);
+  // background: var(--color-link);
   animation: loaderAnim 0.7s linear infinite alternate forwards;
+  background-image: conic-gradient(from 1.5708rad at 50% 50%, #ffb199 0%, #ff0844 100%);
+  box-shadow: 0 8px 40px 0 rgba(72, 8, 25, 0.15);
 }
 
 @keyframes loaderAnim {
