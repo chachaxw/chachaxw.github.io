@@ -79,6 +79,13 @@ a:focus {
   box-shadow: 0 8px 40px 0 rgba(72, 8, 25, 0.15);
 }
 
+.charming-text span {
+  display: inline-block;
+  white-space: pre;
+  pointer-events: none;
+  will-change: transform;
+}
+
 .typing.animate {
   width: 21ch;
   border-right: 0.1em solid black;
