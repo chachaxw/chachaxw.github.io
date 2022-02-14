@@ -97,8 +97,6 @@ const Scene = () => {
       a2 = (winHeight / winWidth) * imageAspect;
     }
 
-    console.log(a1, a2);
-
     if (shaderRef.current) {
       shaderRef.current.uniforms.resolution.value.x = winWidth;
       shaderRef.current.uniforms.resolution.value.y = winHeight;
@@ -169,10 +167,10 @@ const Scene = () => {
     };
   }, [onMouseMove, onResize, regenerateGrid]);
 
-  console.log(texture);
+  console.log(dataTexture);
 
   return (
-    <mesh>
+    <mesh autoUpdate>
       <planeGeometry />
       <shaderMaterial
         ref={shaderRef}
@@ -182,7 +180,7 @@ const Scene = () => {
             value: 0,
           },
           resolution: {
-            value: new Vector4(winWidth, winHeight),
+            value: new Vector4(),
           },
           uTexture: {
             value: texture,

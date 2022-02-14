@@ -25,15 +25,21 @@ const Cursor = () => {
     gsap.timeline({
       paused: true,
       onStart: () => {
-        cursorDotRef.current.style.transform = `scale(2)`;
-        cursorInnerRef.current.style.filter = `url(#filter-1)`;
+        if (cursorDotRef.current && cursorInnerRef.current) {
+          cursorDotRef.current.style.transform = `scale(2)`;
+          cursorInnerRef.current.style.filter = `url(#filter-1)`;
+        }
       },
       onUpdate: () => {
-        feDisplacementMap.current.scale.baseVal = primitiveValues.scale;
+        if (feDisplacementMap.current) {
+          feDisplacementMap.current.scale.baseVal = primitiveValues.scale;
+        }
       },
       onComplete: () => {
-        cursorInnerRef.current.style.filter = 'none';
-        cursorDotRef.current.style.transform = `scale(1)`;
+        if (cursorDotRef.current && cursorInnerRef.current) {
+          cursorDotRef.current.style.transform = `scale(1)`;
+          cursorInnerRef.current.style.filter = 'none';
+        }
       },
     })
   );
@@ -50,7 +56,7 @@ const Cursor = () => {
       );
     }
 
-    if (cursorRef && cursorInnerRef) {
+    if (cursorRef.current && cursorInnerRef.current) {
       cursorRef.current.style.transform = `translateX(${renderedStyles.tx.previous}px) translateY(${renderedStyles.ty.previous}px)`;
       cursorInnerRef.current.setAttribute('r', renderedStyles.radius.previous);
     }

@@ -12,6 +12,15 @@
   background-image: url(../assets/images/zhouwei.jpg);
 }
 
+.animate-name {
+  span {
+    display: inline-block;
+    white-space: pre;
+    pointer-events: none;
+    will-change: transform;
+  }
+}
+
 .text-bg-animate {
   &:hover {
     &::before {
