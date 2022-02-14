@@ -41,7 +41,6 @@ export const fragment = /* 片段着色器 */ `
     gl_FragColor = vec4(offset.r, 0.0, 0.0, 1.0);
     gl_FragColor = color;
     gl_FragColor = texture2D(uTexture, newUV - 0.02 * offset.rg);
-    // gl_FragColor = offset;
   }`;
 
 export const particles = /* 顶点着色器 */ `
