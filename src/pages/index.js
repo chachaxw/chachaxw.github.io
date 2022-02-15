@@ -12,8 +12,8 @@ const IndexPage = () => {
       <section className="w-full h-screen relative bg-slate-900">
         <CanvasBackground />
         <HoverText />
-        <h2 className="absolute left-4 bottom-4 text-white">
-          Inspired by{' '}
+        <h2 className="absolute left-4 bottom-4 text-white text-sm">
+          Background inspired by{' '}
           <a
             href="https://tympanus.net/codrops/2022/01/12/pixel-distortion-effect-with-three-js/"
             target="_blank"
