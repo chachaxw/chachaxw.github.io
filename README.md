@@ -49,6 +49,8 @@
 
    - [从 WebGL 谈起到 react-three-fiber](https://blog.esunr.xyz/2020/08/从WebGL谈起到react-three-fiber/#1-1-何为-WebGL)
 
+   - [WebGL 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Tutorial)
+
 ## 🚀 Quick start (Gatsby Cloud)
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
