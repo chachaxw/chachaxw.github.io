@@ -62,12 +62,13 @@ const Scene = () => {
 
     texture.magFilter = texture.minFilter = NearestFilter;
 
-    setDataTexture(texture);
-
     if (shaderRef.current) {
       shaderRef.current.uniforms.uDataTexture.value = texture;
       shaderRef.current.uniforms.uDataTexture.value.needsUpdate = true;
     }
+
+    setDataTexture(texture);
+    console.log('重新生成网格', texture);
   }, [setDataTexture, shaderRef]);
 
   const onMouseMove = useCallback(
@@ -104,10 +105,11 @@ const Scene = () => {
       shaderRef.current.uniforms.resolution.value.w = a2;
     }
 
-    // 如果窗口发生变化, 就更新相机投影, 并重新生成网格
+    // 如果窗口发生变化, 就更新相机投影
     camera.updateProjectionMatrix();
+    // 重新生成网格
     regenerateGrid();
-  }, [winWidth, winHeight, regenerateGrid, camera]);
+  }, [winWidth, winHeight, camera]);
 
   const updateDataTexture = useCallback(() => {
     let data = dataTexture.image.data;
@@ -145,15 +147,15 @@ const Scene = () => {
     dataTexture.needsUpdate = true;
   }, [winWidth, winHeight, dataTexture]);
 
-  useFrame(() => {
-    time += 0.5;
+  // useFrame(() => {
+  //   time += 0.5;
 
-    updateDataTexture();
+  //   updateDataTexture();
 
-    if (shaderRef.current) {
-      shaderRef.current.uniforms.time.value = time;
-    }
-  });
+  //   if (shaderRef.current) {
+  //     shaderRef.current.uniforms.time.value = time;
+  //   }
+  // });
 
   useEffect(() => {
     regenerateGrid();
@@ -167,10 +169,8 @@ const Scene = () => {
     };
   }, [onMouseMove, onResize, regenerateGrid]);
 
-  console.log(dataTexture);
-
   return (
-    <mesh autoUpdate>
+    <mesh>
       <planeGeometry />
       <shaderMaterial
         ref={shaderRef}

@@ -1,0 +1,21 @@
+.logo {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  font-size: 0;
+  border-radius: 999px;
+  background-image: conic-gradient(from 0.25turn at 50% 50%, #ffb199 0%, #ff0844 100%);
+  box-shadow: 0 8px 40px 0 rgba(72, 8, 25, 0.15);
+  transform: rotate(0);
+  animation: conic-gradient 6s linear infinite;
+}
+
+@keyframes conic-gradient {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

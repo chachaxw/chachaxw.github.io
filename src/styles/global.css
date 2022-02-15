@@ -69,16 +69,6 @@ a:focus {
   outline: 0;
 }
 
-.logo {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  font-size: 0;
-  border-radius: 999px;
-  background-image: conic-gradient(from 1.5708rad at 50% 50%, #ffb199 0%, #ff0844 100%);
-  box-shadow: 0 8px 40px 0 rgba(72, 8, 25, 0.15);
-}
-
 .charming-text span {
   display: inline-block;
   white-space: pre;
@@ -88,7 +78,7 @@ a:focus {
 
 .typing.animate {
   width: 21ch;
-  border-right: 0.1em solid black;
+  border-right: 0.1em solid var(--color-link);
   font-family: monospace;
   font-size: 2em;
   animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.5s steps(5) 2.5s, type2 1s steps(4) 3s forwards,
@@ -125,11 +115,11 @@ a:focus {
 @keyframes type3 {
   from {
     width: 20ch;
-    content: "Hello, I'm Chacha, a front-end developer with over 7 years experience!";
+    content: "Hello, I'm Chacha, a Coder and Designer!";
   }
   to {
     width: 42ch;
-    content: "Hello, I'm Chacha, a front-end developer with over 7 years experience!";
+    content: "Hello, I'm Chacha, a Coder and Designer!";
   }
 }
 
