@@ -14,16 +14,16 @@ const Nav = () => {
     <nav className="fixed w-full flex justify-between items-center text-sm px-8 py-2 z-50">
       <Logo />
       <div className="link-list">
-        <Link to="/portfolio" className={`link-helike mx-4 text-sm ${pathname.includes('/portfolio') ? 'active' : ''}`}>
+        <Link to="/portfolio" className={`link--kale mx-4 text-sm ${pathname.includes('/portfolio') ? 'active' : ''}`}>
           Portfolio
         </Link>
-        <Link to="/careers" className={`link-helike mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}>
+        <Link to="/careers" className={`link--kale mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}>
           Careers
         </Link>
-        <Link to="/contact" className={`link-helike mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}>
+        <Link to="/contact" className={`link--kale mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}>
           Contact
         </Link>
-        <a href="https://github.com/chachaxw" target="_blank" className="link-helike ml-4 text-sm" rel="noreferrer">
+        <a href="https://github.com/chachaxw" target="_blank" className="link--kale ml-4 text-sm" rel="noreferrer">
           Github
         </a>
       </div>
