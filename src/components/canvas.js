@@ -3,6 +3,8 @@ import { DataTexture, DoubleSide, RGBAFormat, FloatType, NearestFilter, Vector4 
 import { useWindowSize } from 'react-use';
 import { extend, Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
+import { EffectComposer, ColorAverage } from '@react-three/postprocessing';
+import { BlendFunction } from 'postprocessing';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 import { vertex, fragment } from '../utils/shaders';
@@ -36,8 +38,6 @@ const Scene = () => {
   const { width: winWidth, height: winHeight } = useWindowSize();
   const [dataTexture, setDataTexture] = useState(new DataTexture());
 
-  texture.needsUpdate = true;
-
   const regenerateGrid = useCallback(() => {
     const width = settings.grid;
     const height = settings.grid;
@@ -68,7 +68,6 @@ const Scene = () => {
     }
 
     setDataTexture(texture);
-    console.log('重新生成网格', texture);
   }, [setDataTexture, shaderRef]);
 
   const onMouseMove = useCallback(
@@ -86,21 +85,24 @@ const Scene = () => {
   );
 
   const onResize = useCallback(() => {
-    const imageAspect = 1836 / 2448;
+    const img = texture.image;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const imageAspect = img.height / img.width;
     let a1;
     let a2;
 
-    if (winHeight / winWidth > imageAspect) {
-      a1 = (winWidth / winHeight) * imageAspect;
+    if (screenHeight / screenWidth > imageAspect) {
+      a1 = (screenWidth / screenHeight) * imageAspect;
       a2 = 1;
     } else {
       a1 = 1;
-      a2 = (winHeight / winWidth) * imageAspect;
+      a2 = (screenHeight / screenWidth) * imageAspect;
     }
 
     if (shaderRef.current) {
-      shaderRef.current.uniforms.resolution.value.x = winWidth;
-      shaderRef.current.uniforms.resolution.value.y = winHeight;
+      shaderRef.current.uniforms.resolution.value.x = img.offsetWidth;
+      shaderRef.current.uniforms.resolution.value.y = img.offsetHeight;
       shaderRef.current.uniforms.resolution.value.z = a1;
       shaderRef.current.uniforms.resolution.value.w = a2;
     }
@@ -109,7 +111,7 @@ const Scene = () => {
     camera.updateProjectionMatrix();
     // 重新生成网格
     regenerateGrid();
-  }, [winWidth, winHeight, camera]);
+  }, [camera, texture, regenerateGrid]);
 
   const updateDataTexture = useCallback(() => {
     let data = dataTexture.image.data;
@@ -147,15 +149,17 @@ const Scene = () => {
     dataTexture.needsUpdate = true;
   }, [winWidth, winHeight, dataTexture]);
 
-  // useFrame(() => {
-  //   time += 0.5;
+  useFrame(({ camera }) => {
+    time += 0.5;
 
-  //   updateDataTexture();
+    updateDataTexture();
 
-  //   if (shaderRef.current) {
-  //     shaderRef.current.uniforms.time.value = time;
-  //   }
-  // });
+    if (shaderRef.current) {
+      shaderRef.current.uniforms.time.value = time;
+    }
+
+    camera.updateProjectionMatrix();
+  });
 
   useEffect(() => {
     regenerateGrid();
@@ -223,7 +227,11 @@ const CanvasBackground = () => {
         bottom={frustumSize / -2}
         near={-1000}
         far={1000}
+        manual
       >
+        <EffectComposer>
+          <ColorAverage blendFunction={BlendFunction.MULTIPLY} />
+        </EffectComposer>
         <Suspense fallback={null}>
           <Scene />
         </Suspense>
