@@ -28,6 +28,7 @@
     "gatsby-plugin-react-helmet": "^5.6.0",
     "gatsby-plugin-sass": "^5.6.0",
     "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-source-filesystem": "^4.6.0",
     "gatsby-transformer-sharp": "^4.6.0",
     "gsap": "^3.9.1",

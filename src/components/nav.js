@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import TransitionLink from 'gatsby-plugin-transition-link';
 
 import './nav.scss';
 import Logo from './logo';
@@ -14,15 +14,24 @@ const Nav = () => {
     <nav className="fixed w-full flex justify-between items-center text-sm px-8 py-2 z-50">
       <Logo />
       <div className="link-list">
-        <Link to="/portfolio" className={`link--kale mx-4 text-sm ${pathname.includes('/portfolio') ? 'active' : ''}`}>
+        <TransitionLink
+          to="/portfolio"
+          className={`link--kale mx-4 text-sm ${pathname.includes('/portfolio') ? 'active' : ''}`}
+        >
           Portfolio
-        </Link>
-        <Link to="/careers" className={`link--kale mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}>
+        </TransitionLink>
+        <TransitionLink
+          to="/careers"
+          className={`link--kale mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}
+        >
           Careers
-        </Link>
-        <Link to="/contact" className={`link--kale mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}>
+        </TransitionLink>
+        <TransitionLink
+          to="/contact"
+          className={`link--kale mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}
+        >
           Contact
-        </Link>
+        </TransitionLink>
         <a href="https://github.com/chachaxw" target="_blank" className="link--kale ml-4 text-sm" rel="noreferrer">
           Github
         </a>
