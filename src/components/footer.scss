@@ -1,5 +1,6 @@
 .icon {
   color: var(--color-text);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .tooltip {
@@ -13,6 +14,7 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   pointer-events: none;
+  white-space: nowrap;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   &::before {
@@ -61,4 +63,11 @@
 .stack:hover .tooltip::before {
   color: #fff;
   background-color: #f48225;
+}
+
+.email:hover,
+.email:hover .tooltip,
+.email:hover .tooltip::before {
+  color: #fff;
+  background-color: #ff0844;
 }

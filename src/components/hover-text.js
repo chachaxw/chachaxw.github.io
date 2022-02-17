@@ -51,15 +51,11 @@ const HoverText = ({ text }) => {
     );
 
     tl.current
-      .from(
-        textRef.current.children,
-        {
-          scale: 0,
-          opacity: 0,
-          y: '100%',
-        },
-        0.25
-      )
+      .set(textRef.current.children, {
+        scale: 0,
+        opacity: 0,
+        y: '100%',
+      })
       .to(textRef.current.children, {
         stagger: { each: 0.1 },
         duration: 0.3,

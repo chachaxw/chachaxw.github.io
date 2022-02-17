@@ -12,27 +12,33 @@ const Footer = () => {
     >
       <div className="icon-wrapper flex py-8">
         <a href="https://www.zhihu.com/people/chachaxw" target="_blank" rel="noreferrer">
-          <div className="icon zhihu relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mr-8">
+          <div className="icon zhihu relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-4">
             <div className="tooltip">知乎</div>
             <FaZhihu className="text-2xl" />
           </div>
         </a>
         <a href="https://twitter.com/ChachaChou18" target="_blank" rel="noreferrer">
-          <div className="icon twitter relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mr-8">
+          <div className="icon twitter relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-4">
             <div className="tooltip">Twitter</div>
             <FaTwitter className="text-xl" />
           </div>
         </a>
         <a href="https://github.com/chachaxw" target="_blank" rel="noreferrer">
-          <div className="icon github relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mr-8">
+          <div className="icon github relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-4">
             <div className="tooltip">Github</div>
             <FaGithub className="text-xl" />
           </div>
         </a>
         <a href="https://stackoverflow.com/users/6071623/chacha" target="_blank" rel="noreferrer">
-          <div className="icon stack relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg">
-            <div className="tooltip text-xs">Stack Overflow</div>
+          <div className="icon stack relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-4">
+            <div className="tooltip">Stack Overflow</div>
             <FaStackOverflow className="text-xl" />
+          </div>
+        </a>
+        <a href="mailto:chachazw@gmail.com" rel="noreferrer">
+          <div className="icon email relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-4">
+            <div className="tooltip">Send Mail</div>
+            <HiMail className="text-xl" />
           </div>
         </a>
       </div>
