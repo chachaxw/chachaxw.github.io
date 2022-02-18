@@ -53,7 +53,7 @@ const Transitions = ({ isOpened, direction, duration, onUpdate }) => {
 
       return str;
     },
-    [direction, isOpened]
+    [direction, duration, isOpened]
   );
 
   const render = useCallback(() => {
@@ -66,7 +66,7 @@ const Transitions = ({ isOpened, direction, duration, onUpdate }) => {
         paths[i].setAttribute('d', updatePath(Date.now() - (timeStart + delayPerPath * (paths.length - i - 1))));
       }
     }
-  }, [updatePath, paths]);
+  }, [updatePath, isOpened, paths]);
 
   const renderLoop = useCallback(() => {
     if (!paths.length) {
