@@ -3,13 +3,12 @@ import { DataTexture, DoubleSide, RGBAFormat, FloatType, NearestFilter, Vector4 
 import { useWindowSize } from 'react-use';
 import { extend, Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
-import { EffectComposer, ColorAverage } from '@react-three/postprocessing';
-import { BlendFunction } from 'postprocessing';
+import { EffectComposer, Noise } from '@react-three/postprocessing';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 import { vertex, fragment } from '../utils/shaders';
 import { MathUtils } from '../utils/utils';
-import img from '../assets/images/work.jpg';
+import img from '../assets/images/bg.jpeg';
 
 // Tree-shaking
 extend({ DataTexture, DoubleSide, RGBAFormat, FloatType, NearestFilter, Vector4 });
@@ -230,7 +229,7 @@ const CanvasBackground = () => {
         manual
       >
         <EffectComposer>
-          <ColorAverage blendFunction={BlendFunction.MULTIPLY} />
+          <Noise opacity={0.02} />
         </EffectComposer>
         <Suspense fallback={null}>
           <Scene />

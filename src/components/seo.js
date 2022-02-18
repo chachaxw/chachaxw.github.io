@@ -43,10 +43,10 @@ const Seo = ({ description, lang, meta, title }) => {
 };
 
 Seo.defaultProps = {
-  title: 'Chacha-Front-end Developer',
+  title: 'Chacha - Front-end Developer',
   lang: `zh`,
   meta: [],
-  description: `Front-end Developer`,
+  description: `Hello, I'm Chacha Chou(周伟), a front-end developer with over 7 years experience, welcome to my Website!`,
 };
 
 Seo.propTypes = {

@@ -9,6 +9,11 @@ import Transitions from './transitions';
 import './layout.scss';
 
 const Layout = ({ title, description, children }) => {
+  console.log(
+    '%c  Dev by Chacha Chou — https://github.com/chachaxw  ',
+    'background-color: #ff0844; color: #f9d63d; font-size:10px; padding: 6px; border-radius:4px;'
+  );
+
   return (
     <>
       <Nav />
