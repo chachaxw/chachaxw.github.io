@@ -2,16 +2,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { Link } from 'gatsby';
 import charming from 'charming';
+import LocomotiveScroll from 'locomotive-scroll';
 import { BiArrowBack, BiTransfer } from 'react-icons/bi';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 import Layout from '../../components/layout';
 import { MathUtils } from '../../utils/utils';
+import { galleryList } from '../../utils/constants';
+import GalleryItem from './components/gallery-item';
 
 import './styles.scss';
 import myself from '../../assets/images/myself_4.jpg';
 
-gsap.registerPlugin(ScrollTrigger);
+let scroll;
 
 const CareersPage = () => {
   const titleRef = useRef();
@@ -23,6 +25,13 @@ const CareersPage = () => {
   const tl = useRef(gsap.timeline());
 
   useEffect(() => {
+    // Initialize Locomotive Scroll (horizontal direction)
+    scroll = new LocomotiveScroll({
+      el: document.querySelector('#scroll-container'),
+      smooth: true,
+      direction: 'horizontal',
+    });
+
     charming(titleRef.current);
 
     // Animate the content item title letters
@@ -60,37 +69,19 @@ const CareersPage = () => {
     setVisible(_visible);
 
     if (_visible) {
-      tl.current
-        .to(sectionRef1.current, {
-          x: '-100%',
-          ease: 'power1.out',
-        })
-        .to(sectionRef2.current, {
-          x: 0,
-          ease: 'power2.in',
-        });
+      tl.current.to(sectionRef2.current, {
+        x: 0,
+        ease: 'power2.in',
+      });
     } else {
-      tl.current
-        .to(sectionRef2.current, {
-          x: '100%',
-          ease: 'power2.out',
-        })
-        .to(sectionRef1.current, {
-          x: 0,
-          ease: 'power1.in',
-        });
+      tl.current.to(sectionRef2.current, {
+        x: '100%',
+        ease: 'power2.out',
+      });
     }
   };
 
-  const handleDragStart = (e) => {
-    console.log('Drag Start', e);
-    e.stopPropagation();
-    e.preventDefault();
-  };
-
-  const handleDragEnd = (e) => {
-    console.log('Drag End', e);
-  };
+  console.log(scroll);
 
   return (
     <Layout>
@@ -110,24 +101,25 @@ const CareersPage = () => {
               Hello, I'm Chacha Chou(周伟), a front-end developer with over 7 years experience, welcome to my Website!
             </p>
             <p className="mb-16">
-              Proficient in emerging front-end technology frameworks such as <span className="font-bold">VueJs</span>,{' '}
-              <span className="font-bold">React</span>, <span className="font-bold">Angular</span>,{' '}
-              <span className="font-bold">ThreeJS</span> and <span className="font-bold">Flutter</span> etc.
+              Proficient in emerging front-end frameworks such as <span className="font-bold">React</span>,{' '}
+              <span className="font-bold">VueJS</span>, <span className="font-bold">Angular</span>,{' '}
+              <span className="font-bold">ThreeJS</span>, and also focuing on <span className="font-bold">Flutter</span>{' '}
+              and <span className="font-bold">React-Native</span> framework for building multi-platform applications.
             </p>
             <p>
-              During this period, I have developed some large PC-side and mobile-side web app, pure{' '}
-              <span className="font-bold">Flutter</span> mobile native app,{' '}
-              <span className="font-bold">react-native</span> hybrid app, developed{' '}
-              <span className="font-bold">WeChat mini-program</span>, and written{' '}
-              <span className="font-bold">NodeJS</span>. Large Front-end project development experience and front-end{' '}
-              <span className="font-bold">architecture design</span> experience, over 4 years of front-end{' '}
-              <span className="font-bold">Team Management</span> experience, and able to stand alone from design to
-              development.
+              During my careers, I have developed some large PC-side and mobile-side respoinsive web proejct, pure{' '}
+              <span className="font-bold">Flutter</span> mobile cross platform native app,{' '}
+              <span className="font-bold">React-Native</span> hybrid app, and developed WeChat{' '}
+              <span className="font-bold">Mini-program</span>, and written some{' '}
+              <span className="font-bold">NodeJS</span>. Having large scale Front-end project development experience and
+              front-end <span className="font-bold">architecture design</span> experience, over 4 years of front-end{' '}
+              <span className="font-bold">Team Management</span> experience, and able to stand alone from{' '}
+              <span className="font-bold">design to development</span>.
             </p>
           </div>
           <span className="block mt-14 w-10 bg-slate-900" style={{ height: 2 }} />
         </div>
-        <h3 className="absolute left-4 bottom-4 text-sm">
+        <span className="absolute left-4 bottom-4 text-sm">
           Transition inspired by{' '}
           <a
             href="https://tympanus.net/codrops/2017/10/17/dynamic-shape-overlays-with-svg/"
@@ -136,24 +128,37 @@ const CareersPage = () => {
           >
             Dynamic Shape Overlays with SVG
           </a>
-        </h3>
+        </span>
       </section>
-      <section id="scroll-container" className="scroll-container" ref={sectionRef2}>
-        <div className="scroll-content">
-          <div className="career-title flex flex-col">
-            <span>My</span>
-            <span>Careers</span>
+      <section className="section-wrap" ref={sectionRef2}>
+        <div id="scroll-container" className="scroll-container" data-scroll-container>
+          <div className="scroll-content">
+            <div className="career-title flex flex-col">
+              <span data-scroll data-scroll-speed="2">
+                My
+              </span>
+              <span data-scroll data-scroll-speed="1">
+                Careers
+              </span>
+            </div>
+            {galleryList.map((item, index) => (
+              <GalleryItem key={index} {...item} />
+            ))}
           </div>
         </div>
-        <a
-          draggable="true"
-          onClick={handleClick}
-          onDragStart={handleDragStart}
-          onDragEnd={handleDragEnd}
-          className={`enter-button shadow-lg ${visible ? 'visible' : ''}`}
-        >
+        <a onClick={handleClick} className={`enter-button shadow-lg ${visible ? 'visible' : ''}`}>
           <BiTransfer />
         </a>
+        <span className="absolute left-4 bottom-4 text-sm text-white z-10">
+          Inspired by{' '}
+          <a
+            href="https://tympanus.net/codrops/2020/12/08/horizontal-smooth-scroll-layouts/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Horizontal Smooth Scroll Layouts
+          </a>
+        </span>
       </section>
     </Layout>
   );
