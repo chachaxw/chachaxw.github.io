@@ -11,7 +11,7 @@ const Nav = () => {
   const { pathname } = isBrowser ? window.location : { pathname: '/' };
 
   return (
-    <nav className="fixed w-full flex justify-between items-center text-sm px-8 py-2 z-50">
+    <nav className="fixed w-full flex justify-between items-center text-sm px-5 py-2 z-50">
       <Logo />
       <div className="link-list">
         <TransitionLink
@@ -21,10 +21,10 @@ const Nav = () => {
           Portfolio
         </TransitionLink>
         <TransitionLink
-          to="/careers"
-          className={`link--kale mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}
+          to="/about"
+          className={`link--kale mx-4 text-sm ${pathname.includes('/about') ? 'active' : ''}`}
         >
-          Careers
+          About
         </TransitionLink>
         <TransitionLink
           to="/contact"

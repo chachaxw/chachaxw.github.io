@@ -14,7 +14,7 @@ let lettersRotations = [];
 let lastY = 0;
 let totalRandomLetters = 4;
 
-const HoverText = ({ text }) => {
+const HoverText = ({ delay, text }) => {
   const textRef = useRef();
   // store the timeline in a ref.
   const tl = useRef(gsap.timeline());
@@ -57,6 +57,7 @@ const HoverText = ({ text }) => {
         y: '100%',
       })
       .to(textRef.current.children, {
+        delay,
         stagger: { each: 0.1 },
         duration: 0.3,
         scale: 1,
@@ -64,7 +65,7 @@ const HoverText = ({ text }) => {
         y: 0,
         ease: 'power4.out',
       });
-  }, []);
+  }, [delay]);
 
   const tilt = () => {
     // Document scrolls
@@ -138,6 +139,7 @@ HoverText.defaultProps = {
 
 HoverText.propTypes = {
   text: PropTypes.string,
+  delay: PropTypes.number,
 };
 
 export default HoverText;
