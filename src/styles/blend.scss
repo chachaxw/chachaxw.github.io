@@ -1,0 +1,193 @@
+.retro-blend-darken {
+  position: relative;
+  background-color: #f1e3a0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background-image: linear-gradient(180deg, #f430a9, #f2e782);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: darken;
+    filter: grayscale(100%) contrast(2);
+  }
+}
+
+.pink-blend-darken {
+  position: relative;
+  background-color: #fca300;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    filter: contrast(1.1);
+    background-color: #282581;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: darken;
+  }
+}
+
+.purple-blend-hard {
+  position: relative;
+  background-color: #88169d;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: hard-light;
+    background-image: linear-gradient(to top left, #75d775, #321a5b);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+    filter: grayscale(100%) contrast(1.2);
+  }
+}
+
+.blue-blend-multiply {
+  background-color: #77acd4;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background-color: #033dc5;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1.2);
+  }
+}
+
+.vintage-blend-multiply {
+  position: relative;
+  background-color: #caeaf2;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background-color: #2cd6e1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1.5);
+  }
+}
+
+.blue-red-blend-lighten {
+  position: relative;
+  background-color: #e50914;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    filter: contrast(1.1);
+    background-color: #282581;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: grayscale(100%) contrast(1.2);
+  }
+}
+
+.orange-blend-multiply {
+  position: relative;
+  background-color: #f65e35;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    background-color: #1e3265;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1.2);
+  }
+}
+
+.yellow-blend-multiply {
+  position: relative;
+  background-color: #181e59;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background-color: #e7e1a6;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode: lighten;
+    filter: grayscale(100%) contrast(0.8);
+  }
+}
