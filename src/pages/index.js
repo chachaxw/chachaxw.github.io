@@ -11,7 +11,7 @@ const IndexPage = () => {
     <Layout>
       <section className="w-full h-screen relative bg-slate-900">
         <CanvasBackground />
-        <HoverText />
+        <HoverText delay={1} />
         <h2 className="absolute left-4 bottom-4 text-white text-sm">
           Background inspired by{' '}
           <a
