@@ -63,24 +63,46 @@ const CareersPage = () => {
       <section className="section-wrap">
         <div id="scroll-container" className="scroll-container" data-scroll-container>
           <div className="scroll-content">
-            <div className="career-title flex flex-col" id="myCareers" ref={titleRef}>
-              <span data-scroll data-scroll-speed="2" className="line-make">
-                <span>My</span>
-              </span>
-              <span data-scroll data-scroll-speed="1" className="line-make">
-                <span>Careers</span>
-              </span>
+            <div className="career-title" id="myCareers" ref={titleRef}>
+              <div className="flex flex-col items-center">
+                <span data-scroll data-scroll-speed="2" className="line-make">
+                  <span>My</span>
+                </span>
+                <span data-scroll data-scroll-speed="1" className="line-make">
+                  <span>Careers</span>
+                </span>
+              </div>
+              <div className="text-image-wrapper">
+                <div className="text-image flex flex-col items-center">
+                  <span data-scroll data-scroll-speed="2" className="line-make">
+                    <span>My</span>
+                  </span>
+                  <span data-scroll data-scroll-speed="1" className="line-make">
+                    <span>Careers</span>
+                  </span>
+                </div>
+              </div>
             </div>
             {galleryList.map((item, index) => (
               <GalleryItem key={index} {...item} />
             ))}
-            <a className="start-button flex flex-col" onClick={handleScrollTo}>
-              <span data-scroll data-scroll-speed="1">
-                Start
-              </span>
-              <span data-scroll data-scroll-speed="2">
-                There
-              </span>
+            <a className="start-button flex justify-center" onClick={handleScrollTo}>
+              <div className="flex flex-col">
+                <span data-scroll data-scroll-speed="1">
+                  Start
+                </span>
+                <span data-scroll data-scroll-speed="2">
+                  There
+                </span>
+              </div>
+              <div className="text-image flex flex-col">
+                <span data-scroll data-scroll-speed="1">
+                  Start
+                </span>
+                <span data-scroll data-scroll-speed="2">
+                  There
+                </span>
+              </div>
             </a>
           </div>
         </div>
