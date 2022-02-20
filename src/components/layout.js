@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Cursor from './cursor';
 import Nav from './nav';
 import Seo from './seo';
+import Transitions from './transitions';
 
 import './layout.scss';
 
@@ -20,6 +21,7 @@ const Layout = ({ title, description, children }) => {
       <Nav />
       <Seo title={title} description={description} />
       {children}
+      <Transitions />
       <Cursor />
     </>
   );

@@ -1,9 +1,9 @@
 import img1 from '../assets/images/gallery/gallery_1.png';
 import img2 from '../assets/images/gallery/gallery_2.png';
 import img3 from '../assets/images/gallery/gallery_3.jpg';
-import img4 from '../assets/images/gallery/gallery_7.jpg';
-import img5 from '../assets/images/gallery/gallery_8.jpg';
-import img6 from '../assets/images/gallery/gallery_10.jpg';
+import img4 from '../assets/images/gallery/gallery_10.jpg';
+import img5 from '../assets/images/gallery/gallery_11.jpg';
+import img6 from '../assets/images/gallery/gallery_12.jpg';
 
 export const galleryList = [
   {

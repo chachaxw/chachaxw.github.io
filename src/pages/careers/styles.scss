@@ -24,6 +24,38 @@
   }
 }
 
+.line-make {
+  line-height: 1.2;
+  overflow: hidden;
+
+  span {
+    display: block;
+    transform: translate3d(0, 120%, 0);
+  }
+
+  &.is-inview span {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+  }
+}
+
+.text-path {
+  line-height: 1;
+  font-size: 16vw;
+  -webkit-text-stroke: 2px var(--color-link);
+  text-stroke: 2px var(--color-link);
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-path-fill {
+  -webkit-text-stroke: #fff;
+  text-stroke: #fff;
+  -webkit-text-fill-color: #fff;
+  text-fill-color: #fff;
+}
+
 .scroll-container {
   position: relative;
   height: 100vh;
@@ -39,45 +71,55 @@
   }
 
   .career-title {
+    position: relative;
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
     font-size: 16vw;
-    -webkit-text-stroke: 2px var(--color-link);
-    text-stroke: 2px var(--color-link);
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    color: transparent;
-  }
+    color: var(--color-link);
 
-  .line-make {
-    line-height: 1.2;
-    overflow: hidden;
-
-    span {
-      display: block;
-      transform: translate3d(0, 120%, 0);
+    .line-make:last-child span {
+      transition-delay: 1s;
     }
 
-    &.is-inview span {
-      transform: translate3d(0, 0, 0);
-      transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+    .text-image-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+
+      .text-image {
+        position: absolute;
+        width: calc(100vh - 16rem);
+        height: calc(100vh - 16rem);
+        border-radius: calc(100vh - 16rem);
+        background: no-repeat center;
+        background-image: url('../../assets/images/gallery/gallery_15.jpg');
+        background-size: cover;
+        overflow: hidden;
+      }
     }
   }
 
   .start-button {
-    @extend .career-title;
+    position: relative;
     width: 60vw;
+    font-size: 16vw;
+    line-height: 1;
+    align-self: center;
+    cursor: pointer;
+    color: var(--color-link);
 
-    .button-area {
+    .text-image {
+      color: #fff;
       position: absolute;
-      right: -5vw;
-      width: 20vw;
-      height: 20vw;
-      border-radius: 20vw;
-      background-color: var(--color-link);
+      top: 0;
+      border-radius: 999px;
+      background: no-repeat center;
+      background-image: url('../../assets/images/gallery/gallery_7.jpg');
+      background-size: cover;
+      overflow: hidden;
     }
   }
 

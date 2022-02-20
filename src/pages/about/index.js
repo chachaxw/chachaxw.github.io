@@ -5,7 +5,6 @@ import charming from 'charming';
 import { BiArrowBack } from 'react-icons/bi';
 
 import Layout from '../../components/layout';
-import Transitions from '../../components/transitions';
 import { MathUtils } from '../../utils/utils';
 
 import './styles.scss';
@@ -101,7 +100,6 @@ const CareersPage = () => {
           </a>
         </span>
       </section>
-      <Transitions />
     </Layout>
   );
 };

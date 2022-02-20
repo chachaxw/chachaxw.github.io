@@ -8,7 +8,6 @@ const numPoints = 10;
 const delayPointsArray = [];
 const delayPointsMax = 300;
 const delayPerPath = 250;
-const timeStart = Date.now();
 
 for (var i = 0; i < numPoints; i++) {
   delayPointsArray[i] = Math.random() * delayPointsMax;
@@ -16,6 +15,7 @@ for (var i = 0; i < numPoints; i++) {
 
 const Transitions = ({ isOpened, direction, duration, onUpdate }) => {
   const svgRef = useRef();
+  const timeStart = Date.now();
   const [paths, setPaths] = useState([]);
 
   const updatePath = useCallback(
@@ -111,8 +111,8 @@ const Transitions = ({ isOpened, direction, duration, onUpdate }) => {
           <stop offset="100%" stopColor="#ff3898" />
         </linearGradient>
         <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#110046" />
-          <stop offset="100%" stopColor="#32004a" />
+          <stop offset="0%" stopColor="#0f172a" />
+          <stop offset="100%" stopColor="#0f172a" />
         </linearGradient>
       </defs>
       <path className="shape-overlays__path"></path>
