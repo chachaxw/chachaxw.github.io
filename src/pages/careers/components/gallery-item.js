@@ -40,7 +40,6 @@ GalleryItem.defaultProps = {
   speed: 1,
   tags: [],
   direction: 'horizontal',
-  title: 'Hola Chacha',
 };
 
 GalleryItem.propTypes = {
