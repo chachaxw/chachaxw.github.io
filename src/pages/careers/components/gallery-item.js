@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import '../styles.scss';
 
-const GalleryItem = ({ title, tags, time, image, speed, direction, description }) => {
+const GalleryItem = ({ onClick, title, tags, time, image, speed, direction, description }) => {
   return (
     <figure className="gallery__item" data-scroll data-scroll-speed={speed} data-scroll-direction={direction}>
       <div className="gallery__item-img">
@@ -29,7 +29,9 @@ const GalleryItem = ({ title, tags, time, image, speed, direction, description }
             <span key={index}>{item}</span>
           ))}
         </p>
-        <a className="gallery__item-link">explore</a>
+        <a className="gallery__item-link" onClick={onClick}>
+          explore
+        </a>
       </figcaption>
     </figure>
   );
@@ -47,6 +49,7 @@ GalleryItem.propTypes = {
   time: PropTypes.string,
   speed: PropTypes.number,
   image: PropTypes.string,
+  onClick: PropTypes.func,
   direction: PropTypes.string,
   description: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),

@@ -115,6 +115,10 @@ const Scene = () => {
   const updateDataTexture = useCallback(() => {
     let data = dataTexture.image.data;
 
+    if (!data) {
+      return;
+    }
+
     for (let i = 0; i < data.length; i += 4) {
       data[i] *= settings.relaxation;
       data[i + 1] *= settings.relaxation;

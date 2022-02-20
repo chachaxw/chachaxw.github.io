@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 
 import Layout from '../../components/layout';
-import Transitions from '../../components/transitions';
 import { MathUtils } from '../../utils/utils';
 import { galleryList } from '../../utils/constants';
 import GalleryItem from './components/gallery-item';
@@ -117,7 +116,6 @@ const CareersPage = () => {
           </a>
         </span>
       </section>
-      <Transitions />
     </Layout>
   );
 };
