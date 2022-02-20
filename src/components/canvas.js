@@ -8,7 +8,7 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 import { vertex, fragment } from '../utils/shaders';
 import { MathUtils } from '../utils/utils';
-import img from '../assets/images/bg.jpeg';
+import img from '../assets/images/bg.jpg';
 
 // Tree-shaking
 extend({ DataTexture, DoubleSide, RGBAFormat, FloatType, NearestFilter, Vector4 });

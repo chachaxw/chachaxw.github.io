@@ -52,6 +52,7 @@ body {
   --color-gallery-text: #ff0844;
   --color-gallery-tag-text: #6c4b4b;
   --color-gallery-img-bg: #ff0844;
+  --color-gallery-desc: #fff;
 
   /* Cursor styles */
   --cursor-stroke: #ffffff;

@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import Cursor from './cursor';
 import Nav from './nav';
 import Seo from './seo';
-import Transitions from './transitions';
 
 import './layout.scss';
 
 const Layout = ({ title, description, children }) => {
   useEffect(() => {
     console.log(
-      '%c  Dev by Chacha Chou — https://github.com/chachaxw  ',
+      '%c  Developed and Designed by Chacha Chou — https://github.com/chachaxw  ',
       'background-color: #ff0844; color: #f9d63d; font-size:10px; padding: 6px; border-radius:4px;'
     );
   }, []);
@@ -21,7 +20,6 @@ const Layout = ({ title, description, children }) => {
       <Nav />
       <Seo title={title} description={description} />
       {children}
-      <Transitions />
       <Cursor />
     </>
   );

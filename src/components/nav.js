@@ -27,6 +27,12 @@ const Nav = () => {
           About
         </TransitionLink>
         <TransitionLink
+          to="/careers"
+          className={`link--kale mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}
+        >
+          Careers
+        </TransitionLink>
+        <TransitionLink
           to="/contact"
           className={`link--kale mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}
         >
