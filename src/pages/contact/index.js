@@ -8,7 +8,7 @@ import Layout from '../../components/layout';
 import { MathUtils } from '../../utils/utils';
 
 import './styles.scss';
-import myself from '../../assets/images/bg.jpeg';
+import myself from '../../assets/images/bg.jpg';
 
 const ContactPage = () => {
   const iconRef = useRef();
