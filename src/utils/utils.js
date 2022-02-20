@@ -16,6 +16,8 @@ export const MathUtils = {
     const b = y1 - m * x1;
     return m * currentVal + b;
   },
+  // 从区间[a, b] 到 [c, d] 之间映射 x
+  map: (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c,
   lerp: (a, b, n) => (1 - n) * a + n * b, // 线性插值
   getRandomFloat: (min, max) => (Math.random() * (max - min) + min).toFixed(2), // 随机浮点数
 
