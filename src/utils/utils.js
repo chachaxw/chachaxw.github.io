@@ -42,3 +42,6 @@ export const getMousePos = (ev) => {
 
   return { x: posX, y: posY };
 };
+
+// Check if window is defined (so if in the browser or in node.js).
+export const isBrowser = typeof window !== 'undefined';
