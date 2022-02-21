@@ -15,9 +15,6 @@ const CareersPage = () => {
   const scrollRef = useRef();
 
   const handleScroll = useCallback((obj) => {
-    // console.log('====================================');
-    // console.log(obj);
-    // console.log('====================================');
     for (const key of Object.keys(obj.currentElements)) {
       if (obj.currentElements[key].el.classList.contains('gallery__item-imginner')) {
         let progress = obj.currentElements[key].progress;

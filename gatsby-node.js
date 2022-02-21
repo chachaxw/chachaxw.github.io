@@ -1,1 +1,14 @@
-exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions }) => {};
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /locomotive-scroll/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
+};
