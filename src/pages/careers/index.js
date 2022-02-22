@@ -28,11 +28,12 @@ const CareersPage = () => {
       if (
         obj.currentElements[key].el.classList.contains('gallery__item-desc') ||
         obj.currentElements[key].el.classList.contains('gallery__item-title') ||
+        obj.currentElements[key].el.classList.contains('gallery__item-link') ||
         obj.currentElements[key].el.classList.contains('gallery__item-number')
       ) {
         let progress = obj.currentElements[key].progress;
         const opacity =
-          progress < 0.5 ? clamp(map(progress, 0, 0.5, 0, 1), 0, 1) : clamp(map(progress, 0.5, 1, 1, 0), 0, 1);
+          progress < 0.5 ? clamp(map(progress, 0, 0.5, 0, 1), 0.2, 1) : clamp(map(progress, 0.5, 1, 1, 0), 0.2, 1);
         obj.currentElements[key].el.style.opacity = opacity;
       }
     }

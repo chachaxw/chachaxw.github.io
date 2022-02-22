@@ -30,6 +30,18 @@ const mouse = {
   prevY: 0,
 };
 
+/**
+ *
+ * WebGL渲染管线流程：
+ * 1. 初始化WebGL - Javascript是用于初始化WebGL的上下文
+ * 2. 创建数组 - 创建Javascript数组来保存几何数据
+ * 3. 缓冲区对象 - 通过将数组作为参数来创建缓冲区对象(顶点和索引)
+ * 4. 着色器 − 我们创建，编译和使用JavaScript链接着色器
+ * 5. 属性− 我们可以创建属性，启用它们并使用JavaScript缓冲区对象相关联
+ * 6. 制服− 我们还可以使用 JavaScript 制服(uniforms)关联
+ * 7. 变换矩阵 − 使用JavaScript，我们可以创建变换矩阵
+ *
+ */
 const Scene = () => {
   const shaderRef = useRef();
   const { camera } = useThree();

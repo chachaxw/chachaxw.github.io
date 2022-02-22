@@ -5,7 +5,6 @@ import { FaTwitter, FaGithub, FaZhihu, FaStackOverflow } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
 import Layout from '../../components/layout';
-import Transitions from '../../components/transitions';
 import { MathUtils } from '../../utils/utils';
 
 import './styles.scss';
@@ -93,7 +92,6 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      <Transitions />
     </Layout>
   );
 };

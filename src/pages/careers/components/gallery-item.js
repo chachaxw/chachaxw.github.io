@@ -29,7 +29,7 @@ const GalleryItem = ({ onClick, title, tags, time, image, speed, direction, desc
             <span key={index}>{item}</span>
           ))}
         </p>
-        <a className="gallery__item-link" onClick={onClick}>
+        <a className="gallery__item-link" data-scroll onClick={onClick}>
           explore
         </a>
       </figcaption>

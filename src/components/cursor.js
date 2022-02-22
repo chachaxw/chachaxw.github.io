@@ -8,9 +8,9 @@ import './cursor.scss';
 
 let primitiveValues = { scale: 0 };
 let renderedStyles = {
-  tx: { previous: 0, current: 0, amt: 0.14 },
-  ty: { previous: 0, current: 0, amt: 0.14 },
-  radius: { previous: 24, current: 24, amt: 0.14 },
+  tx: { previous: 0, current: 0, amt: 0.1 },
+  ty: { previous: 0, current: 0, amt: 0.1 },
+  radius: { previous: 24, current: 24, amt: 0.1 },
 };
 
 const Cursor = () => {
@@ -78,7 +78,7 @@ const Cursor = () => {
     renderedStyles.tx.previous = renderedStyles.tx.current = docX - width / 2;
     renderedStyles.ty.previous = renderedStyles.ty.current = docY - height / 2;
 
-    gsap.to(cursorRef.current, { duration: 0.9, ease: 'Power3.easeOut', opacity: 1 });
+    gsap.to(cursorRef.current, { duration: 0.8, ease: 'Power3.easeOut', opacity: 1 });
 
     requestAnimationFrame(render);
   }, [render, cursorRef, docX, docY, width, height]);

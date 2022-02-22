@@ -35,7 +35,7 @@
 
   &.is-inview span {
     transform: translate3d(0, 0, 0);
-    transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
   }
 }
 
@@ -77,7 +77,7 @@
     color: var(--color-link);
 
     .line-make:last-child span {
-      transition-delay: 1s;
+      transition-delay: 1.2s;
     }
 
     .text-image-wrapper {
@@ -104,7 +104,7 @@
 
   .start-button {
     position: relative;
-    width: 60vw;
+    margin: 0 8rem;
     font-size: 16vw;
     line-height: 1;
     align-self: center;
