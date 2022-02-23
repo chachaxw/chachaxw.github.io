@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { Link } from 'gatsby';
 import charming from 'charming';
@@ -13,24 +13,36 @@ import GalleryItem from './components/gallery-item';
 import './styles.scss';
 import myself from '../../assets/images/myself_4.jpg';
 
-let scroll;
-
 const CareersPage = () => {
   const titleRef = useRef();
   const textRef = useRef();
+  const scrollRef = useRef();
   const contentRef = useRef();
   const sectionRef1 = useRef();
   const sectionRef2 = useRef();
   const [visible, setVisible] = useState(false);
   const tl = useRef(gsap.timeline());
 
+  const handleScroll = useCallback((args) => {
+    console.log(args);
+
+    // Get all current elements : args.currentElements
+    if (typeof args.currentElements['myCareers'] === 'object') {
+      let progress = args.currentElements['myCareers'].progress;
+      console.log(progress);
+      // ouput log example: 0.34
+      // gsap example : myGsapAnimation.progress(progress);
+    }
+  }, []);
   useEffect(() => {
     // Initialize Locomotive Scroll (horizontal direction)
-    scroll = new LocomotiveScroll({
+    scrollRef.current = new LocomotiveScroll({
       el: document.querySelector('#scroll-container'),
       smooth: true,
       direction: 'horizontal',
     });
+
+    scrollRef.current.on('scroll', handleScroll);
 
     charming(titleRef.current);
 
@@ -62,7 +74,7 @@ const CareersPage = () => {
         y: 0,
         opacity: 1,
       });
-  }, [tl]);
+  }, [tl, handleScroll]);
 
   const handleClick = () => {
     const _visible = !visible;
@@ -80,8 +92,6 @@ const CareersPage = () => {
       });
     }
   };
-
-  console.log(scroll);
 
   return (
     <Layout>
@@ -133,7 +143,7 @@ const CareersPage = () => {
       <section className="section-wrap" ref={sectionRef2}>
         <div id="scroll-container" className="scroll-container" data-scroll-container>
           <div className="scroll-content">
-            <div className="career-title flex flex-col">
+            <div className="career-title flex flex-col" data-scroll data-scroll-id="myCareers">
               <span data-scroll data-scroll-speed="2">
                 My
               </span>
