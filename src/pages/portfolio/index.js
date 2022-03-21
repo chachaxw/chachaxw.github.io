@@ -7,7 +7,13 @@ import Layout from '../../components/layout';
 gsap.registerPlugin(ScrollTrigger);
 
 const PortfolioPage = () => {
-  return <Layout></Layout>;
+  return (
+    <Layout>
+      <section className="h-screen flex justify-center items-center">
+        <h1 className="text-white text-5xl">Under Development</h1>
+      </section>
+    </Layout>
+  );
 };
 
 export default PortfolioPage;

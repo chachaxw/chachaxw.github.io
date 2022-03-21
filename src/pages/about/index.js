@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Link } from 'gatsby';
 import charming from 'charming';
-import { BiArrowBack } from 'react-icons/bi';
 
 import Layout from '../../components/layout';
 import { MathUtils } from '../../utils/utils';
@@ -59,9 +58,6 @@ const CareersPage = () => {
       </div>
       <section className="absolute top-0 w-full h-screen flex text-slate-900" ref={sectionRef1}>
         <div className="w-1/2 h-full p-32 leading-relaxed flex flex-col justify-center absolute" ref={contentRef}>
-          <Link to="/" className="flex text-slate-900 items-center">
-            <BiArrowBack className="text-lg" />
-          </Link>
           <h1 className="charming-text text-5xl font-bold mt-8 relative" id="title" ref={titleRef}>
             Chacha Chou
           </h1>
@@ -86,8 +82,19 @@ const CareersPage = () => {
               <span className="font-bold">Team Management</span> experience, and able to stand alone from{' '}
               <span className="font-bold">design to development</span>.
             </p>
+            <div className="flex justify-between items-center mt-14">
+              <span className="block w-10 bg-slate-900" style={{ minHeight: 2 }} />
+              <a
+                href="https://github.com/chachaxw/chachaxw.github.io/tree/master/src/assets/pdf/Front-end Developer Chacha's Resume.pdf"
+                target="_blank"
+                download
+                className="link--kale ml-4 text-sm relative"
+                rel="noreferrer"
+              >
+                Download My Resume
+              </a>
+            </div>
           </div>
-          <span className="block mt-14 w-10 bg-slate-900" style={{ minHeight: 2 }} />
         </div>
         <span className="absolute left-4 bottom-4 text-sm">
           Transition inspired by{' '}
