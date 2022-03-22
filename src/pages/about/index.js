@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Link } from 'gatsby';
 import charming from 'charming';
 
 import Layout from '../../components/layout';
@@ -87,7 +86,6 @@ const CareersPage = () => {
               <a
                 href="https://github.com/chachaxw/chachaxw.github.io/tree/master/src/assets/pdf/Front-end Developer Chacha's Resume.pdf"
                 target="_blank"
-                download
                 className="link--kale ml-4 text-sm relative"
                 rel="noreferrer"
               >
