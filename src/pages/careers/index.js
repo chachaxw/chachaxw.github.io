@@ -25,7 +25,10 @@ const CareersPage = () => {
         obj.currentElements[key].el.style.filter = `saturate(${saturateVal}) brightness(${brightnessVal})`;
       }
 
+      // console.log(obj.currentElements[key].el.classList);
+
       if (
+        obj.currentElements[key].el.classList.contains('career-title') ||
         obj.currentElements[key].el.classList.contains('gallery__item-desc') ||
         obj.currentElements[key].el.classList.contains('gallery__item-title') ||
         obj.currentElements[key].el.classList.contains('gallery__item-link') ||
@@ -60,7 +63,7 @@ const CareersPage = () => {
       <section className="section-wrap">
         <div id="scroll-container" className="scroll-container" data-scroll-container>
           <div className="scroll-content">
-            <div className="career-title" id="myCareers" ref={titleRef}>
+            <div className="career-title" data-scroll id="myCareers" ref={titleRef}>
               <div className="flex flex-col items-center">
                 <span data-scroll data-scroll-speed="2" className="line-make">
                   <span>My</span>
