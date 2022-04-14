@@ -12,16 +12,16 @@
   position: relative;
   background-color: var(--color-bg);
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8rem;
-    height: 100%;
-    z-index: 10;
-    background-image: linear-gradient(270deg, rgba(15, 23, 42, 0) 0%, #0f172a 30%, #0f172a 100%);
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 8rem;
+  //   height: 100%;
+  //   z-index: 10;
+  //   background-image: linear-gradient(270deg, rgba(15, 23, 42, 0) 0%, #0f172a 30%, #0f172a 100%);
+  // }
 }
 
 .line-make {

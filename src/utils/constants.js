@@ -16,7 +16,7 @@ export const galleryList = [
   },
   {
     title: 'Front-end Team Leader',
-    time: '2019 - Now',
+    time: '2019 - 22',
     image: img2,
     tags: ['#React', '#Flutter', '#iOS', '#Android'],
     description:
