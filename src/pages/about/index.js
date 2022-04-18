@@ -56,15 +56,18 @@ const CareersPage = () => {
         <img src={myself} alt="Chacha Chou" className="absolute right-0" style={{ width: '60%' }} />
       </div>
       <section className="absolute top-0 w-full h-screen flex text-slate-900" ref={sectionRef1}>
-        <div className="w-1/2 h-full p-32 leading-relaxed flex flex-col justify-center absolute" ref={contentRef}>
-          <h1 className="charming-text text-5xl font-bold mt-8 relative" id="title" ref={titleRef}>
+        <div
+          className="w-full h-full md:w-1/2 p-5 md:p-32 leading-relaxed flex flex-col justify-center absolute"
+          ref={contentRef}
+        >
+          <h1 className="charming-text text-3xl md:text-5xl font-bold mt-8 relative" id="title" ref={titleRef}>
             Chacha Chou
           </h1>
           <div ref={textRef}>
-            <p className="my-8">
+            <p className="my-5 md:my-8">
               Hello, I'm Chacha Chou(周伟), a front-end developer with over 7 years experience, welcome to my Website!
             </p>
-            <p className="mb-16">
+            <p className="mb-5 md:mb-16">
               Proficient in emerging front-end frameworks such as <span className="font-bold">React</span>,{' '}
               <span className="font-bold">VueJS</span>, <span className="font-bold">Angular</span>,{' '}
               <span className="font-bold">ThreeJS</span>, and also focusing on{' '}

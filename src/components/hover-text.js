@@ -126,7 +126,7 @@ const HoverText = ({ delay, text }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       ref={mergeRefs([ref, textRef])}
-      className="hover-text charming-text absolute top-1/2 left-1/2 text-4xl lg:text-8xl 2xl:text-9xl font-bold -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
+      className="hover-text charming-text absolute top-1/2 left-1/2 text-4xl lg:text-9xl lg:font-bold -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
     >
       {text}
     </a>

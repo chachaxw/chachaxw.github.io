@@ -10,7 +10,7 @@ const Nav = () => {
   const { pathname } = isBrowser ? window.location : { pathname: '/' };
 
   return (
-    <nav className="fixed w-full flex justify-between items-center text-sm px-5 py-2 z-50">
+    <nav className="fixed w-full flex justify-between items-center text-sm px-5 py-2 z-50 flex-nowrap">
       <Logo />
       <div className="link-list flex">
         <TransitionLink

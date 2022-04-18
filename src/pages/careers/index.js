@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
+import { useMedia } from 'react-use';
 import LocomotiveScroll from 'locomotive-scroll';
 
 import Layout from '../../components/layout';
@@ -13,6 +14,7 @@ const { clamp, map } = MathUtils;
 const CareersPage = () => {
   const titleRef = useRef();
   const scrollRef = useRef();
+  const isMobile = useMedia('(max-width: 640px)');
 
   const handleScroll = useCallback((obj) => {
     for (const key of Object.keys(obj.currentElements)) {
@@ -47,7 +49,7 @@ const CareersPage = () => {
     scrollRef.current = new LocomotiveScroll({
       el: document.querySelector('#scroll-container'),
       smooth: true,
-      direction: 'horizontal',
+      direction: isMobile ? 'vertical' : 'horizontal',
     });
 
     scrollRef.current.on('scroll', handleScroll);
