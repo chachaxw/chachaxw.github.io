@@ -110,7 +110,13 @@ const Cursor = () => {
   }, [onMouseMove, onMouseEnter, onMouseLeave]);
 
   return (
-    <svg className="cursor" width="96" height="96" viewBox="0 0 96 96" ref={mergeRefs([cursorRef, ref])}>
+    <svg
+      className="cursor hidden lg:block"
+      width="96"
+      height="96"
+      viewBox="0 0 96 96"
+      ref={mergeRefs([cursorRef, ref])}
+    >
       <defs>
         <filter id="filter-1" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
           <feTurbulence type="fractalNoise" baseFrequency="0.02 0.15" numOctaves="3" result="warp" />
