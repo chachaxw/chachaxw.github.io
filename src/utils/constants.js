@@ -4,15 +4,24 @@ import img3 from '../assets/images/gallery/gallery_3.jpg';
 import img4 from '../assets/images/gallery/gallery_10.jpg';
 import img5 from '../assets/images/gallery/gallery_11.jpg';
 import img6 from '../assets/images/gallery/gallery_12.jpg';
+import img7 from '../assets/images/gallery/gallery_7.jpg';
 
 export const galleryList = [
   {
     title: 'Front-end Tech Expert',
     time: 'Future',
-    image: img1,
+    image: img7,
     tags: ['#ThreeJS', '#Web3', '#More...'],
     description:
-      'Have a lofty passion and interest in code and design, currently focusing on Computer Graphic and Web3',
+      'Have a lofty passion and interest in code and design, focusing on Computer Graphic, Web3 and Metaverse',
+  },
+  {
+    title: 'Senior Software Developer',
+    time: '2022 - Now',
+    image: img1,
+    tags: ['#React', '#Vue', '#React-Native', '#Web3'],
+    description:
+      'As the senior software developer in crypto.com Exchange team, responsible for integrated cms management platform, the exchange user dashboard page, and the x-ui components library, ans using react-native to develop cross platform apps',
   },
   {
     title: 'Front-end Team Leader',

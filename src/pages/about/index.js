@@ -79,8 +79,8 @@ const CareersPage = () => {
               <span className="font-bold">Flutter</span> cross platform mobile native app,{' '}
               <span className="font-bold">React-Native</span> hybrid app, and developed WeChat{' '}
               <span className="font-bold">Mini-program</span>, and written some{' '}
-              <span className="font-bold">NodeJS</span>. Having large scale Front-end project development experience and
-              front-end <span className="font-bold">architecture design</span> experience, over 4 years of front-end{' '}
+              <span className="font-bold">NodeJS</span>. Having large scale front-end project development experience and
+              <span className="font-bold">Architecture Design</span> experience, over 4 years of front-end{' '}
               <span className="font-bold">Team Management</span> experience, and able to stand alone from{' '}
               <span className="font-bold">design to development</span>.
             </p>

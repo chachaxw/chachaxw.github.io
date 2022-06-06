@@ -54,7 +54,7 @@ const ContactPage = () => {
           <img src={myself} alt="Chacha Chou" />
         </div>
         <div className="w-full h-screen flex flex-col justify-center items-center text-sm fixed top-0">
-          <h2 className="typing animate whitespace-nowrap text-primary mb-8 py-1 z-10" />
+          <h2 className="typing animate md:whitespace-nowrap text-primary mb-8 py-1 z-10" />
           <div className="icon-wrapper flex py-8" ref={iconRef}>
             <a href="https://www.zhihu.com/people/chachaxw" target="_blank" rel="noreferrer">
               <div className="icon zhihu relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-2 md:mx-5">

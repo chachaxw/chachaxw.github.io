@@ -15,25 +15,25 @@ const Nav = () => {
       <div className="link-list flex">
         <TransitionLink
           to="/portfolio"
-          className={`link--kale mx-4 text-sm ${pathname.includes('/portfolio') ? 'active' : ''}`}
+          className={`link--kale mx-2 md:mx-4 text-sm ${pathname.includes('/portfolio') ? 'active' : ''}`}
         >
           Portfolio
         </TransitionLink>
         <TransitionLink
           to="/about"
-          className={`link--kale mx-4 text-sm ${pathname.includes('/about') ? 'active' : ''}`}
+          className={`link--kale mx-2 md:mx-4 text-sm ${pathname.includes('/about') ? 'active' : ''}`}
         >
           About
         </TransitionLink>
         <TransitionLink
           to="/careers"
-          className={`link--kale mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}
+          className={`link--kale mx-2 md:mx-4 text-sm ${pathname.includes('/careers') ? 'active' : ''}`}
         >
           Careers
         </TransitionLink>
         <TransitionLink
           to="/contact"
-          className={`link--kale mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}
+          className={`link--kale mx-2 md:mx-4 text-sm ${pathname.includes('/contact') ? 'active' : ''}`}
         >
           Contact
         </TransitionLink>
