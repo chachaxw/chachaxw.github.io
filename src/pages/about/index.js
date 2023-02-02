@@ -87,7 +87,7 @@ const CareersPage = () => {
             <div className="flex justify-between items-center mt-14">
               <span className="block w-10 bg-slate-900" style={{ minHeight: 2 }} />
               <a
-                href="https://github.com/chachaxw/chachaxw.github.io/tree/master/src/assets/pdf/Front-end Developer Chacha's Resume.pdf"
+                href="https://github.com/chachaxw/chachaxw.github.io/tree/master/src/assets/pdf/Chacha(周伟)-Senior Front-end Developer's Resume-2023.pdf"
                 target="_blank"
                 className="link--kale ml-4 text-sm relative"
                 rel="noreferrer"
