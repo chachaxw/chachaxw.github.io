@@ -37,6 +37,12 @@ const Nav = () => {
         >
           Contact
         </TransitionLink>
+        <TransitionLink
+          to="/resume"
+          className={`link--kale mx-2 md:mx-4 text-sm ${pathname.includes('/resume') ? 'active' : ''}`}
+        >
+          Resume
+        </TransitionLink>
         <a href="https://github.com/chachaxw" target="_blank" className="link--kale ml-4 text-sm" rel="noreferrer">
           Github
         </a>
