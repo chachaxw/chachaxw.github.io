@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7;IE=EDGE" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="alternate" media="handheld" href="#" />
+    <meta charset="utf-8" />
+    <title>Chacha(周伟) - Senior Front-end Developer's Resume</title>
+    <style>
+      * {
+        outline: none;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans,
+          Helvetica Neue, sans-serif;
+        color: #333;
+        word-wrap: break-word;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      main,
+      menu,
+      nav,
+      section,
+      summary {
+        display: block;
+      }
+
+      progress {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+
+      a {
+        color: #555;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #00b38a;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 10px 0;
+        font-weight: normal;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      p + p {
+        margin-top: 10px;
+      }
+
+      img {
+        border: 0;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #ededed;
+        border-radius: 0;
+        font-family: 'Hiragino Sans GB', 'Microsoft Yahei', 'SimSun', Arial, 'Helvetica Neue', Helvetica;
+      }
+
+      textarea {
+        overflow: auto;
+      }
+
+      label,
+      select,
+      button,
+      input[type='button'],
+      input[type='reset'],
+      input[type='submit'],
+      input[type='radio'],
+      input[type='checkbox'],
+      input[type='file'] {
+        cursor: pointer;
+      }
+
+      input[type='text'],
+      input[type='password'],
+      textarea {
+        font-family: 'Microsoft Yahei', 'SimSun', Arial, 'Helvetica Neue', Helvetica;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      th,
+      td {
+        padding: 0;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+
+      em,
+      i {
+        font-style: normal;
+      }
+
+      dl,
+      dt,
+      dd {
+        margin: 0;
+      }
+
+      ::selection {
+        color: #fff;
+        background-color: #00b38a;
+      }
+
+      ::-moz-selection {
+        color: #fff;
+        background-color: #00b38a;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      #container {
+        width: 900px;
+        margin: 50px auto 54px auto;
+        border: 1px solid #e3ebe9;
+        border-radius: 5px;
+      }
+
+      .mr-template {
+        padding: 30px 50px 10px;
+      }
+
+      .mr-template .mr-template_title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .mr-template .mr-template_title span {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 600;
+        position: relative;
+        margin-left: 10px;
+      }
+
+      .mr-template .mr-template_title span:before {
+        content: '';
+        display: block;
+        border-left: 3px solid #00b38a;
+        height: 16px;
+        width: 3px;
+        position: absolute;
+        left: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .mr-template .mr_md_del {
+        display: none;
+      }
+
+      /***** 基本信息 ****/
+
+      .basic {
+        padding: 50px;
+        background: #fafafa;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 1px solid #e3ebe9;
+        display: flex;
+      }
+
+      .basic .basic-photo {
+        height: 88px;
+        width: 88px;
+        display: inline-block;
+        position: relative;
+      }
+
+      .basic .basic-photo img {
+        height: 88px;
+        width: 88px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+      }
+
+      .basic .basic-photo .basic-photo_shadow {
+        display: none;
+      }
+
+      .basic .basic-photo:hover .basic-photo_shadow {
+        display: block;
+      }
+
+      .basic .basic-info {
+        position: relative;
+        width: 100%;
+        margin-left: 20px;
+        flex: 1;
+      }
+
+      .basic .basic-info .edit-btn {
+        position: absolute;
+        right: 0;
+        top: 4px;
+      }
+
+      .basic .basic-info .basic-name-area {
+        overflow: hidden;
+        height: 37px;
+        margin-bottom: 11px;
+      }
+
+      .basic .basic-info .basic-name {
+        float: left;
+        max-width: 300px;
+        font-size: 26px;
+        color: #333333;
+        font-weight: 600;
+        line-height: 37px;
+      }
+
+      .basic .basic-info .icon-sex {
+        width: 13px;
+        height: 13px;
+        float: left;
+        margin-top: 16px;
+        margin-left: 10px;
+        background: none;
+      }
+
+      .basic .basic-info .icon-sex.icon-sex__male {
+        background: url(https://www.lgstatic.com/common/image/pc/icon_man.png);
+      }
+
+      .basic .basic-info .icon-sex.icon-sex__female {
+        background: url(https://www.lgstatic.com/common/image/pc/icon_woman.png);
+      }
+
+      .basic .basic-info .basic-self {
+        margin-top: 20px;
+      }
+
+      .basic .basic-info p {
+        font-size: 14px;
+        color: #333333;
+        line-height: 20px;
+        margin-top: 6px;
+      }
+
+      .basic .basic-info i {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-tel_icon {
+        width: 11px;
+        height: 14px;
+        margin-right: 2px;
+        background: url(https://www.lgstatic.com/common/image/pc/icon_phone.png);
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-email_icon {
+        width: 14px;
+        height: 11px;
+        margin-right: 2px;
+        background: url(https://www.lgstatic.com/common/image/pc/icon_mail.png);
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-tel {
+        margin-right: 20px;
+      }
+
+      .basic-tel span {
+        vertical-align: middle;
+      }
+
+      .basic-email span {
+        vertical-align: middle;
+      }
+
+      /***** 基本信息 end ****/
+
+      /***** 自我描述 ****/
+
+      .per .per-self_content {
+        position: relative;
+      }
+
+      .per .per-self_content .per-self_des {
+        margin-top: 13px;
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+      }
+
+      .per .per-self_content .per-self_des p {
+        margin-top: 0;
+      }
+
+      .per .per-self_content .per-self_des ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+      }
+      .per .per-self_content .per-self_des ul {
+        list-style: disc;
+        -webkit-padding-start: 20px;
+      }
+
+      /***** 自我描述 end ****/
+
+      /***** 工作经历 ****/
+
+      .work-exp .work-exp_list {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .work-exp .work-exp_list:last-child {
+        margin-bottom: 0;
+      }
+
+      .work-exp .work-exp_list .exp-list_time {
+        font-size: 14px;
+        color: #444;
+        position: absolute;
+        right: 0;
+      }
+
+      .work-exp .work-exp_list .exp-list_top {
+        display: flex;
+        align-items: center;
+      }
+
+      .work-exp .work-exp_list .exp-list_top img {
+        width: 46px;
+        height: 46px;
+        margin-right: 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 46px;
+        justify-content: space-between;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right p,
+      .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
+        font-size: 14px;
+        color: #333333;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
+        font-weight: 600;
+      }
+
+      .work-exp .work-exp_list .tagboard {
+        margin: 20px 0 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content {
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+      }
+
+      .tagboard .tagboard-tag {
+        font-size: 12px;
+        color: #999;
+        line-height: 18px;
+        padding: 3px 10px;
+        border: 1px solid #eaedec;
+        border-radius: 100px;
+        margin-right: 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content ul,
+      .work-exp .work-exp_list .exp-list_content_highlight ul {
+        list-style: disc;
+        -webkit-padding-start: 20px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content ol,
+      .work-exp .work-exp_list .exp-list_content_highlight ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+      }
+      /***** 工作经历 end ****/
+
+      /***** 项目经历 ****/
+
+      .pro-exp .pro-exp_list {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title {
+        font-size: 14px;
+        color: #333333;
+        font-weight: 600;
+        cursor: default;
+        display: flex;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_name,
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_company span {
+        max-width: 400px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_company {
+        display: flex;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_time {
+        font-size: 14px;
+        color: #444;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content,
+      .pro-exp .pro-exp_list .exp-project_des {
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+        margin-top: 10px;
+      }
+
+      .pro-exp .exp-list_title.active:hover {
+        color: #00b38a;
+        cursor: pointer;
+      }
+      .pro-exp .exp-project_url {
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+      }
+      .pro-exp .pro-exp_list .exp-list_content ul,
+      .pro-exp .pro-exp_list .exp-project_des ul {
+        list-style: disc;
+        -webkit-padding-start: 20px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content ol,
+      .pro-exp .pro-exp_list .exp-project_des ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+      }
+
+      /***** 项目经历 end ****/
+
+      /***** 教育经历 ****/
+
+      .edu-exp .edu-exp_list {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .edu-exp .edu-exp_list:last-child {
+        position: relative;
+        margin-bottom: 0;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_time {
+        font-size: 14px;
+        color: #666666;
+        position: absolute;
+        right: 0;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top {
+        display: flex;
+        align-items: center;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top img {
+        width: 46px;
+        height: 46px;
+        margin-right: 10px;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 46px;
+        justify-content: space-between;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right p,
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
+        font-size: 14px;
+        color: #333333;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
+        font-weight: 600;
+      }
+
+      /***** 教育经历 end ****/
+
+      /***** 社交主页 ****/
+
+      .social-page .social-page_list {
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .social-page .social-page_list .social-page_content {
+        display: flex;
+      }
+
+      .social-page .social-page_list .social-page_content img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+
+      .social-page .social-page_list .social-page_content p {
+        font-size: 14px;
+        color: #666666;
+      }
+
+      /***** 社交主页 end ****/
+      /***** 图片作品 ****/
+
+      .portfolio-page .portfolio-list {
+        margin-bottom: 30px;
+        position: relative;
+      }
+      .portfolio-page .portfolio-list .portfolio-content {
+        font-size: 14px;
+        color: #666666;
+      }
+
+      /***** 图片作品 end ****/
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- 基本信息 -->
+      <div class="basic" id="baseInfo">
+        <div class="basic-photo">
+          <img
+            class="mr_headimg user-avatar"
+            id="userpic"
+            src="https://www.lgstatic.com/i/image2/M01/6A/AB/CgotOVtL-RCAEaEBAAHWAI81Guc485.jpg"
+            width="120"
+            height="120"
+            alt="头像"
+          />
+        </div>
+        <div class="basic-info">
+          <div class="basic-name-area">
+            <p class="basic-name female">Chacha Zhou(周伟)</p>
+            <i class="icon-sex icon-sex__male"></i>
+          </div>
+          <p>
+            <span class="basic-company"> Crypto.com - Foris Technology (Shenzhen) Limited </span>
+            <span> / </span>
+            <span class="basic-job">Senior Software Engineer</span>
+          </p>
+          <p class="basic-self">
+            <span class="basic-exp">7 Years Experience / </span>
+            <span class="basic-edu">College Degree / </span>
+            <span class="basic-age">29 Years Old</span>
+          </p>
+          <p>
+            <span class="basic-tel">
+              <i class="basic-tel_icon"></i>
+              <span>13798247501</span>
+            </span>
+            <span class="basic-email">
+              <i class="basic-email_icon"></i>
+              <span>chachazw@gmail.com</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <!-- /基本信息 -->
+
+      <!-- 自我描述 -->
+      <div class="mr-template per" id="perAbility">
+        <div class="mr-template_title">
+          <span>Profile</span>
+        </div>
+        <div class="tagboard integrative-tag">
+          <div class="integrative-tag_content">
+            <span class="tagboard-tag">Execution</span>
+            <span class="tagboard-tag">Team Spirit</span>
+            <span class="tagboard-tag">Self-driven</span>
+            <span class="tagboard-tag">Adaptability</span>
+            <span class="tagboard-tag">English</span>
+          </div>
+        </div>
+        <div class="per-self_content">
+          <div class="per-self_des">
+            <p>
+              Over 7 years of front-end experience, and developed many projects during this time, including
+              <b>React</b> and <b>Vue</b> web app, <b>Blockchain Web3</b> dapp, <b>React-Native</b> app, WeChat
+              mini-program, <b>Flutter</b> hybrid app, and also have some <b>Nodejs</b> experience, and as a team leader
+              of 10 members before.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /自我描述 -->
+
+      <!-- 工作经历 -->
+      <div class="mr-template work-exp" id="workExp">
+        <div class="mr-template_title">
+          <span>Work Experience</span>
+        </div>
+        <ol class="work-exp_group">
+          <li class="work-exp_list">
+            <p class="exp-list_time">2022.05-2023-01</p>
+            <div class="exp-list_top">
+              <img src="./crypto.com.jpg" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>Crypto.com - Foris Technology (Shenzhen) Limited.</span>
+                  ／
+                  <span>Exchange Team</span>
+                </strong>
+                <p>Senior Software Engineer</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Vue3</span>
+              <span class="tagboard-tag">CI/CD</span>
+              <span class="tagboard-tag">Typescript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. As a senior software engineer in a large front-end team, responsible for the crypto.com Exchange core
+                features development, including security dashboard, affiliate dashboard, etc.
+              </p>
+              <p>
+                2. Integrate Yubikey web authn to Exchange security dashboard with backend developers, and add Yubikey
+                bridges for Android and iOS platform, improve web and app security.
+              </p>
+              <p>
+                3. Integrate components to UI component library X-UI, and develop UI developer tools to facilitate
+                development and debugging, add Jest unit jest to UI components and improve test coverage.
+              </p>
+              <p>
+                4. Responsible for CI/CD for our Exchange and Yubikey project, integrate Circle CI and Github actions to
+                our Exchange Vue3 migration project.
+              </p>
+              <p>
+                5. Responsible for technology architecture of Vue3 migration project, bring monorepo best practise and
+                develop playground developer tools for Exchange Vue3 migration project and improve page development
+                efficiency.
+              </p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2019.01-2022.04</p>
+            <div class="exp-list_top">
+              <img src="./candela.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span> Candela (Shenzhen) Technology Innovation Co. Ltd. </span>
+                  ／
+                  <span>R&D department</span>
+                </strong>
+                <p>Front-end Team Leader</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Vue</span>
+              <span class="tagboard-tag">Gatsby</span>
+              <span class="tagboard-tag">Flutter</span>
+              <span class="tagboard-tag">Dart</span>
+              <span class="tagboard-tag">Typescript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. As the leader of the large front-end technical team, responsible for the project management and R&D
+                of the web, mobile HTML5, mini-program and Flutter App, responsible for the mobile cross-platform
+                technology R&D and project management, engineering and automatic deployment, technology selection and
+                technology challenge.
+              </p>
+              <p>
+                2. Team management, task arrangement and scheduling, follow up front-end project development progress,
+                improve front-end workflow and product experience, participate in product requirements, interaction and
+                design discussions, and formulate suitable solutions.
+              </p>
+              <p>
+                3. Team building, regularly hold technical sharing within the team, create a cultural atmosphere of
+                engineers, regular team technical training, improve team technical level and R&D ability.
+              </p>
+              <p>
+                4. Responsible for visual monitoring of front-end large-screen robots, video monitoring and remote
+                control of robots, as well as architecture design and technology research and development of visual
+                graphics editing tools, and develop visual applications using D3, fabricJS, ThreeJS, and other
+                frameworks.
+              </p>
+              <p>
+                5. Responsible for the cross-platform technology architecture design of native iOS and Android apps and
+                Flutter, combined with native technology and Flutter cross-platform technology hybrid development, to
+                solve the problem of multiple-end reuse of a set of codes.
+              </p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2018.09-2019.01</p>
+            <div class="exp-list_top">
+              <img src="./olympus-labs.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>OlympusLabs</span>
+                  ／
+                  <span>R&D department</span>
+                </strong>
+                <p>Front-end Developer</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Typescript</span>
+              <span class="tagboard-tag">Web3.js</span>
+              <span class="tagboard-tag">Redux</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Responsible for Web3 dapp and DeFi SDK development, connect front-end with ethereum smart contract
+                and imToken wallet.
+              </p>
+              <p>
+                2. Develop Olympus Portal project which is a DeFi derivatives management system, improve front-end user
+                experience and performance.
+              </p>
+              <p>3. Connect dapp with Metamask and build user wallet account and transactions data visualization.</p>
+              <p>
+                4. Improve front-end workflow and web app experience, participate in product requirements, interaction
+                and design discussions, and formulate suitable solutions.
+              </p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2017.06-2018.8</p>
+            <div class="exp-list_top">
+              <img src="https://www.lgstatic.com/images/logo_default.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>Plum Flower International LLC</span>
+                  ／
+                  <span>R&D department</span>
+                  /
+                  <span>Full-time Remote</span>
+                </strong>
+                <p>Front-end Team Leader</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Flow</span>
+              <span class="tagboard-tag">Jest</span>
+              <span class="tagboard-tag">NextJS</span>
+              <span class="tagboard-tag">Javascript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Served as the technical leader of a 7-person front-end development team from all over the world,
+                responsible for front-end project technology research and development.
+              </p>
+              <p>
+                2. Team management, task arrangement and scheduling, follow up front-end project development progress,
+                improve technical documentation.
+              </p>
+              <p>
+                3. Responsible for front-end performance optimization, front-end architecture design and technology
+                selection, front-end engineering and automatic deployment of large-scale US municipal projects.
+              </p>
+              <p>
+                4. Improve front-end workflow and product experience, participate in product requirements, interaction
+                and design discussions, and formulate suitable solutions.
+              </p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2016.08-2017.06</p>
+            <div class="exp-list_top">
+              <img src="https://www.lgstatic.com/i/image/M00/13/24/CgqKkVbmuniACzKPAADYZIWvYYM207.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>ForChange LLC</span>
+                  ／
+                  <span>R&D department</span>
+                </strong>
+                <p>Front-end Developer</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">Vue</span>
+              <span class="tagboard-tag">VueX</span>
+              <span class="tagboard-tag">Node.js</span>
+              <span class="tagboard-tag">Javascript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. As a core member of the technical team, responsible for the front-end development technology
+                selection, technical architecture, the front-end page refactoring, and implementation of interactive
+                logic and create some amazing animations, data processing of the front-end, and develop progressive
+                front-end page.
+              </p>
+              <p>
+                2. Use Express Nodejs framework as the middle layer to develop the front-end data interface, use Vue
+                front-end framework to develop the book management system SPA, use Vuex as the data state management
+                tool, use Gulp and Webpack to package and compress project files, and front-end development CI/CD.
+              </p>
+              <p>
+                3. Responsible for the front-end development of millions of user-level products, formulate product
+                release processes and code specifications, and design WeChat WebApp multi-page project architecture and
+                workflow.
+              </p>
+            </div>
+          </li>
+          <!-- <li class="work-exp_list">
+            <p class="exp-list_time">2015.07-2016.08</p>
+            <div class="exp-list_top">
+              <img
+                src="https://www.lgstatic.com/image2/M00/07/3B/CgpzWlX-iIGAMv9OAAK5e7LpgQo559.png?cc=0.34825870813801885"
+                alt="公司Logo"
+              />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>Ai Ying Internet Culture Co., Ltd.</span>
+                  ／
+                  <span>R&D department</span>
+                </strong>
+                <p>Front-end Developer</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Jquery</span>
+              <span class="tagboard-tag">HTML5</span>
+              <span class="tagboard-tag">Node.js</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                Responsible for the front-end development technology selection architecture design, the front-end page
+                refactoring, and implementation of interactive logic. Use React + Redux + Ant Design + NodeJS + Webpack
+                to build video editor O2O platform.
+              </p>
+            </div>
+          </li> -->
+        </ol>
+      </div>
+      <!-- /工作经历 -->
+
+      <!-- 项目经历 -->
+      <div class="mr-template pro-exp" id="proExp">
+        <div class="mr-template_title">
+          <span>Project Experience</span>
+        </div>
+        <ol class="pro-exp_group">
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> Crypto.com Exchange </span>
+            </p>
+            <p class="exp-list_time">2022.05-2023.01</p>
+            <div class="exp-project_des">
+              <p>
+                Crypto.com Exchange is a large cryptocurrency exchange which is developed with Vue2 and Vue3 frameworks,
+                and with over 70 million users worldwide.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Develop front-end features with <b>Vue2</b> and <b>Vue3</b> frameworks, develop UI components and add
+                <b>Jest</b> unit tests, fix browser compatibility issues.
+              </p>
+              <p>
+                2. Integrate <b>Circle CI</b> and <b>Github Actions</b> to CI/CD workflow, integrate Javascript error
+                monitoring tool to front-end system.
+              </p>
+              <p>
+                3. Responsible for Vue3 migration architecture design, explore multi-page and single-page application
+                engineering development, and improve project maintainability and scalability.
+              </p>
+              <p>
+                4. Apply and config <b>AWS</b> infrastructure resources, optimize project deployment workflow, and
+                improve deployment efficiency.
+              </p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> Sender Wallet </span>
+            </p>
+            <p class="exp-list_time">2022.07-Currently</p>
+            <div class="exp-project_des">
+              <p>
+                Sender is a browser extension wallet built for near protocol, with the goal of providing a secure and
+                easy-to-use wallet for DeFi and NFT users.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Build the basic technical architecture, and introduce <b>React</b>, <b>Redux</b> and
+                <b>Webpack</b> to extension development.
+              </p>
+              <p>
+                2. Use <b>ethers.js</b> and <b>near api</b> to build cross multi-chain features, and develop
+                <b>Staking</b>, <b>Swap</b> and <b>NFT</b> features.
+              </p>
+              <p>
+                3. Connect <b>Ledger</b> and <b>Keystone</b> hardware wallet to Sender wallet and improve account
+                security.
+              </p>
+              <p>4. Responsible for handling <b>cross-browser compatibility</b> issues.</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> Large Scale Business Management Platform </span>
+            </p>
+            <p class="exp-list_time">2019.02-2020.10</p>
+            <div class="exp-project_des">
+              <p>
+                The business management platform is a large-scale background management system for the robot industry,
+                which integrates express delivery business, takeaway delivery business, and robot shared delivery
+                business. It also includes device management and control platform, robot real-time monitoring system.
+                Monitoring center, reconciliation management, user management, authority management, message center and
+                other core business modules.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Use <b>React</b> and <b>Typescript</b> stack to build the basic technical architecture of the
+                background management system from scratch, create front-end development, UI component library,
+                <b>Jest</b> unit testing and <b>Git Workflow</b> specifications.
+              </p>
+              <p>
+                2. Responsible for the technology research and development of related core modules of the business
+                management platform, including large-screen data monitoring, real-time robot monitoring based on
+                <b>Websocket</b>, and use <b>D3</b> and <b>e-chart</b> to build robot data visualization.
+              </p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name">Aurora Company App</span>
+            </p>
+            <p class="exp-list_time">2018.05-2019.01</p>
+            <div class="exp-project_des">
+              <p>
+                Aurora Company App is an enterprise recruitment service SaaS application that integrates job posting,
+                personnel recruitment and instant communication. Enterprises can publish recruitment information on this
+                platform and communicate with candidates online. There is an Aurora Candidate App on the client side.
+                Ordinary users can find suitable job opportunities on this platform, and at the same time, they can
+                communicate with enterprises online, voice and video, and share files online.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. As the front-end development leader, lead 6 developers from all over the world to develop
+                collaboratively remotely, formulate detailed development tasks, reasonably assign tasks to team members,
+                and ensure efficient team collaboration.
+              </p>
+              <p>
+                2. Design the front-end infrastructure and front-end development workflow, formulate a unified front-end
+                modular development standard, and provide a stable architectural foundation for the team to write
+                high-quality code.
+              </p>
+              <p>
+                3. Unify front-end code specifications, write front-end code specification documents, standardize
+                front-end code styles, and establish code style Check Lists, provide team members with a good coding
+                foundation.
+              </p>
+              <p>
+                4. Formulated the Git standardized workflow and front-end code review process, and worked with Devops
+                developers to formulate the automatic deployment process of web applications to ensure the continuous
+                integration and continuous delivery.
+              </p>
+              <p>
+                5. Formulate the development specifications and standards of the front-end UI component library, use
+                Storybook to collaboratively develop common component libraries and component description documents, use
+                Rollup to package and compress and publish the UI component library on NPM, providing for the
+                development of web applications the possibility of multiplexing and expansion solves the coupling
+                problem between multiple applications.
+              </p>
+              <p>
+                6. Formulate the front-end component Jest test specification, and worked with team members to write
+                component test cases, which improved the front-end component test coverage and reduced the code error
+                rate.
+              </p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name">Eco Web App</span>
+              <!-- <span class="exp-project_company">
+                （<span>Plum Flower International LLC</span>）
+              </span> -->
+            </p>
+            <p class="exp-list_time">2017.06-2018.09</p>
+            <div class="exp-project_des">
+              <p>
+                EcoAppPro is the new standard for urban utility management software and is an efficient and modern
+                mobile GIS integration system. The project is a responsive large-scale integrated front-end project
+                developed using the react technology stack, including Communications, User Center, Assets, System
+                Manager, Personnel, and Logbook.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. As the head of front-end technology, design and build the front-end technology infrastructure, lead 5
+                front-end members to develop collaboratively, and formulate reasonable development tasks.
+              </p>
+              <p>
+                2. Write relatively common front-end development standards, assign tasks to team members on Jira, review
+                member codes, and control the progress of front-end development to achieve agile project development.
+              </p>
+              <p>
+                3. The technology stacks used in the project include React, Redux, React-router, Recompose, Redux-saga,
+                Flow and Semantic-ui-react, etc., and use the above technology stacks to build a stable and efficient
+                front-end technology architecture, design and develop reusable front-end foundations components.
+              </p>
+              <p>
+                4. Develop fetch-based HTTP asynchronous request service, load server-side data asynchronously, process
+                and cache complex data, and solve CORS cross-domain requests.
+              </p>
+              <p>
+                5. Use webpack to achieve a series of engineering development, including compression and packaging of
+                front-end resource files, generation and merging of front-end CSS style files, front-end JS code
+                segmentation and asynchronous loading, and use CDN caching services to improve the performance and
+                experience of the web app.
+              </p>
+              <p>
+                6. Use Jest testing tool to build a front-end testing environment and write complete unit test cases for
+                React components to improve components quality and test coverage.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /项目经历 -->
+
+      <!-- 教育经历 -->
+      <div class="mr-template edu-exp" id="eduExp">
+        <div class="mr-template_title">
+          <span>Education</span>
+        </div>
+        <ol class="edu-exp_group">
+          <li class="edu-exp_list">
+            <p class="exp-list_time">2021-Currently</p>
+            <div class="exp-list_top">
+              <div class="exp-list_right">
+                <strong>Shenzhen University</strong>
+                <p>Bachelor Degree / Computer Science and Applications</p>
+              </div>
+            </div>
+          </li>
+          <li class="edu-exp_list">
+            <p class="exp-list_time">2013-2016</p>
+            <div class="exp-list_top">
+              <div class="exp-list_right">
+                <strong>Shenzhen Polytechnic</strong>
+                <p>College Degree / Communication Technology</p>
+              </div>
+            </div>
+          </li>
+          <li class="edu-exp_list">
+            <p class="exp-list_time">CET-6 / Fluent</p>
+            <div class="exp-list_top">
+              <div class="exp-list_right">
+                <strong>English</strong>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /教育经历 -->
+
+      <!-- 社交主页 -->
+      <div class="mr-template social-page" id="socialPage">
+        <div class="mr-template_title">
+          <span>Social</span>
+        </div>
+        <ol class="social-page_group">
+          <li class="social-page_list">
+            <div class="social-page_content">
+              <img src="https://www.lgstatic.com/common/image/social/github@2x.png" alt="Github" />
+              <a href="http://github.com/chachaxw">http://github.com/chachaxw</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /社交主页 -->
+    </div>
+  </body>
+</html>

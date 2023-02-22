@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7;IE=EDGE" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="alternate" media="handheld" href="#" />
+    <meta charset="utf-8" />
+    <title>周伟 - 资深前端开发工程师</title>
+    <style>
+      * {
+        outline: none;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans,
+          Helvetica Neue, sans-serif;
+        color: #333;
+        word-wrap: break-word;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      main,
+      menu,
+      nav,
+      section,
+      summary {
+        display: block;
+      }
+
+      progress {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+
+      a {
+        color: #555;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #00b38a;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 10px 0;
+        font-weight: normal;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      p + p {
+        margin-top: 10px;
+      }
+
+      img {
+        border: 0;
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #ededed;
+        border-radius: 0;
+        font-family: 'Hiragino Sans GB', 'Microsoft Yahei', 'SimSun', Arial, 'Helvetica Neue', Helvetica;
+      }
+
+      textarea {
+        overflow: auto;
+      }
+
+      label,
+      select,
+      button,
+      input[type='button'],
+      input[type='reset'],
+      input[type='submit'],
+      input[type='radio'],
+      input[type='checkbox'],
+      input[type='file'] {
+        cursor: pointer;
+      }
+
+      input[type='text'],
+      input[type='password'],
+      textarea {
+        font-family: 'Microsoft Yahei', 'SimSun', Arial, 'Helvetica Neue', Helvetica;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      th,
+      td {
+        padding: 0;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+
+      em,
+      i {
+        font-style: normal;
+      }
+
+      dl,
+      dt,
+      dd {
+        margin: 0;
+      }
+
+      ::selection {
+        color: #fff;
+        background-color: #00b38a;
+      }
+
+      ::-moz-selection {
+        color: #fff;
+        background-color: #00b38a;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      #container {
+        width: 900px;
+        margin: 50px auto 54px auto;
+        border: 1px solid #e3ebe9;
+        border-radius: 5px;
+      }
+
+      .mr-template {
+        padding: 30px 50px 10px;
+      }
+
+      .mr-template .mr-template_title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .mr-template .mr-template_title span {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 600;
+        position: relative;
+        margin-left: 10px;
+      }
+
+      .mr-template .mr-template_title span:before {
+        content: '';
+        display: block;
+        border-left: 3px solid #00b38a;
+        height: 16px;
+        width: 3px;
+        position: absolute;
+        left: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .mr-template .mr_md_del {
+        display: none;
+      }
+
+      /***** 基本信息 ****/
+
+      .basic {
+        padding: 50px;
+        background: #fafafa;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 1px solid #e3ebe9;
+        display: flex;
+      }
+
+      .basic .basic-photo {
+        height: 88px;
+        width: 88px;
+        display: inline-block;
+        position: relative;
+      }
+
+      .basic .basic-photo img {
+        height: 88px;
+        width: 88px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+      }
+
+      .basic .basic-photo .basic-photo_shadow {
+        display: none;
+      }
+
+      .basic .basic-photo:hover .basic-photo_shadow {
+        display: block;
+      }
+
+      .basic .basic-info {
+        position: relative;
+        width: 100%;
+        margin-left: 20px;
+        flex: 1;
+      }
+
+      .basic .basic-info .edit-btn {
+        position: absolute;
+        right: 0;
+        top: 4px;
+      }
+
+      .basic .basic-info .basic-name-area {
+        overflow: hidden;
+        height: 37px;
+        margin-bottom: 11px;
+      }
+
+      .basic .basic-info .basic-name {
+        float: left;
+        max-width: 300px;
+        font-size: 26px;
+        color: #333333;
+        font-weight: 600;
+        line-height: 37px;
+      }
+
+      .basic .basic-info .icon-sex {
+        width: 13px;
+        height: 13px;
+        float: left;
+        margin-top: 16px;
+        margin-left: 10px;
+        background: none;
+      }
+
+      .basic .basic-info .icon-sex.icon-sex__male {
+        background: url(https://www.lgstatic.com/common/image/pc/icon_man.png);
+      }
+
+      .basic .basic-info .icon-sex.icon-sex__female {
+        background: url(https://www.lgstatic.com/common/image/pc/icon_woman.png);
+      }
+
+      .basic .basic-info .basic-self {
+        margin-top: 20px;
+      }
+
+      .basic .basic-info p {
+        font-size: 14px;
+        color: #333333;
+        line-height: 20px;
+        margin-top: 6px;
+      }
+
+      .basic .basic-info i {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-tel_icon {
+        width: 11px;
+        height: 14px;
+        margin-right: 2px;
+        background: url(https://www.lgstatic.com/common/image/pc/icon_phone.png);
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-email_icon {
+        width: 14px;
+        height: 11px;
+        margin-right: 2px;
+        background: url(https://www.lgstatic.com/common/image/pc/icon_mail.png);
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .basic .basic-info .basic-tel {
+        margin-right: 20px;
+      }
+
+      .basic-tel span {
+        vertical-align: middle;
+      }
+
+      .basic-email span {
+        vertical-align: middle;
+      }
+
+      /***** 基本信息 end ****/
+
+      /***** 自我描述 ****/
+
+      .per .per-self_content {
+        position: relative;
+      }
+
+      .per .per-self_content .per-self_des {
+        margin-top: 13px;
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+      }
+
+      .per .per-self_content .per-self_des p {
+        margin-top: 0;
+      }
+
+      .per .per-self_content .per-self_des ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+      }
+      .per .per-self_content .per-self_des ul {
+        list-style: disc;
+        -webkit-padding-start: 20px;
+      }
+
+      /***** 自我描述 end ****/
+
+      /***** 工作经历 ****/
+
+      .work-exp .work-exp_list {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .work-exp .work-exp_list:last-child {
+        margin-bottom: 0;
+      }
+
+      .work-exp .work-exp_list .exp-list_time {
+        font-size: 14px;
+        color: #444;
+        position: absolute;
+        right: 0;
+      }
+
+      .work-exp .work-exp_list .exp-list_top {
+        display: flex;
+        align-items: center;
+      }
+
+      .work-exp .work-exp_list .exp-list_top img {
+        width: 46px;
+        height: 46px;
+        margin-right: 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 46px;
+        justify-content: space-between;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right p,
+      .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
+        font-size: 14px;
+        color: #333333;
+      }
+
+      .work-exp .work-exp_list .exp-list_top .exp-list_right strong {
+        font-weight: 600;
+      }
+
+      .work-exp .work-exp_list .tagboard {
+        margin: 20px 0 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content {
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+      }
+
+      .tagboard .tagboard-tag {
+        font-size: 12px;
+        color: #999;
+        line-height: 18px;
+        padding: 3px 10px;
+        border: 1px solid #eaedec;
+        border-radius: 100px;
+        margin-right: 10px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content ul,
+      .work-exp .work-exp_list .exp-list_content_highlight ul {
+        list-style: disc;
+        -webkit-padding-start: 20px;
+      }
+
+      .work-exp .work-exp_list .exp-list_content ol,
+      .work-exp .work-exp_list .exp-list_content_highlight ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+      }
+      /***** 工作经历 end ****/
+
+      /***** 项目经历 ****/
+
+      .pro-exp .pro-exp_list {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title {
+        font-size: 14px;
+        color: #333333;
+        font-weight: 600;
+        cursor: default;
+        display: flex;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_name,
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_company span {
+        max-width: 400px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_title .exp-project_company {
+        display: flex;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_time {
+        font-size: 14px;
+        color: #444;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content,
+      .pro-exp .pro-exp_list .exp-project_des {
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+        margin-top: 10px;
+      }
+
+      .pro-exp .exp-list_title.active:hover {
+        color: #00b38a;
+        cursor: pointer;
+      }
+      .pro-exp .exp-project_url {
+        font-size: 14px;
+        color: #444;
+        line-height: 30px;
+      }
+      .pro-exp .pro-exp_list .exp-list_content ul,
+      .pro-exp .pro-exp_list .exp-project_des ul {
+        list-style: disc;
+        -webkit-padding-start: 20px;
+      }
+
+      .pro-exp .pro-exp_list .exp-list_content ol,
+      .pro-exp .pro-exp_list .exp-project_des ol {
+        list-style-type: decimal;
+        -webkit-padding-start: 20px;
+      }
+
+      /***** 项目经历 end ****/
+
+      /***** 教育经历 ****/
+
+      .edu-exp .edu-exp_list {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .edu-exp .edu-exp_list:last-child {
+        position: relative;
+        margin-bottom: 0;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_time {
+        font-size: 14px;
+        color: #666666;
+        position: absolute;
+        right: 0;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top {
+        display: flex;
+        align-items: center;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top img {
+        width: 46px;
+        height: 46px;
+        margin-right: 10px;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 46px;
+        justify-content: space-between;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right p,
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
+        font-size: 14px;
+        color: #333333;
+      }
+
+      .edu-exp .edu-exp_list .exp-list_top .exp-list_right strong {
+        font-weight: 600;
+      }
+
+      /***** 教育经历 end ****/
+
+      /***** 社交主页 ****/
+
+      .social-page .social-page_list {
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .social-page .social-page_list .social-page_content {
+        display: flex;
+      }
+
+      .social-page .social-page_list .social-page_content img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+
+      .social-page .social-page_list .social-page_content p {
+        font-size: 14px;
+        color: #666666;
+      }
+
+      /***** 社交主页 end ****/
+      /***** 图片作品 ****/
+
+      .portfolio-page .portfolio-list {
+        margin-bottom: 30px;
+        position: relative;
+      }
+      .portfolio-page .portfolio-list .portfolio-content {
+        font-size: 14px;
+        color: #666666;
+      }
+
+      /***** 图片作品 end ****/
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <!-- 基本信息 -->
+      <div class="basic" id="baseInfo">
+        <div class="basic-photo">
+          <img
+            class="mr_headimg user-avatar"
+            id="userpic"
+            src="https://www.lgstatic.com/i/image2/M01/6A/AB/CgotOVtL-RCAEaEBAAHWAI81Guc485.jpg"
+            width="120"
+            height="120"
+            alt="头像"
+          />
+        </div>
+        <div class="basic-info">
+          <div class="basic-name-area">
+            <p class="basic-name female">周伟(Chacha Zhou)</p>
+            <i class="icon-sex icon-sex__male"></i>
+          </div>
+          <p>
+            <span class="basic-company"> Crypto.com - 福里斯科技(深圳)有限公司 </span>
+            <span> / </span>
+            <span class="basic-job">资深软件开发工程师</span>
+          </p>
+          <p class="basic-self">
+            <span class="basic-exp">7年开发经验 / </span>
+            <span class="basic-edu">大专 / </span>
+            <span class="basic-age">29 岁</span>
+          </p>
+          <p>
+            <span class="basic-tel">
+              <i class="basic-tel_icon"></i>
+              <span>13798247501</span>
+            </span>
+            <span class="basic-email">
+              <i class="basic-email_icon"></i>
+              <span>chachazw@gmail.com</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <!-- /基本信息 -->
+
+      <!-- 自我描述 -->
+      <div class="mr-template per" id="perAbility">
+        <div class="mr-template_title">
+          <span>简介</span>
+        </div>
+        <div class="tagboard integrative-tag">
+          <div class="integrative-tag_content">
+            <span class="tagboard-tag">Execution</span>
+            <span class="tagboard-tag">Team Spirit</span>
+            <span class="tagboard-tag">Self-driven</span>
+            <span class="tagboard-tag">Adaptability</span>
+            <span class="tagboard-tag">English</span>
+          </div>
+        </div>
+        <div class="per-self_content">
+          <div class="per-self_des">
+            <p>
+              超过7年的前端经验，在此期间开发了诸多项目，包括<b>React</b>和<b>Vue</b>大型 Web 应用、区块链
+              <b>Web3</b> 应用、<b>React-Native</b> App、微信小程序、<b>Flutter</b>
+              App，也有一定的<b>Nodejs</b>经验，曾作为10名开发团队技术负责人。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /自我描述 -->
+
+      <!-- 工作经历 -->
+      <div class="mr-template work-exp" id="workExp">
+        <div class="mr-template_title">
+          <span>工作经历</span>
+        </div>
+        <ol class="work-exp_group">
+          <li class="work-exp_list">
+            <p class="exp-list_time">2022.05-2023-01</p>
+            <div class="exp-list_top">
+              <img src="../crypto.com.jpg" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>Crypto.com - 福里斯科技(深圳)有限公司</span>
+                  ／
+                  <span>交易所团队</span>
+                </strong>
+                <p>资深软件开发工程师</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Vue3</span>
+              <span class="tagboard-tag">CI/CD</span>
+              <span class="tagboard-tag">Typescript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 作为大型前端团队的高级软件工程师，负责 crypto.com
+                交易所核心功能开发，包括会员邀请数据报表、用户安全认证模块等。
+              </p>
+              <p>
+                2. 与后端开发人员集成 Yubikey Webauthn 到 交易所用户安全认证模块，并集成 Yubikey Web 应用到 Android 和
+                iOS 应用，提高用户交易的安全性。
+              </p>
+              <p>
+                3. 将组件集成到 UI 组件库 X-UI，集成界面开发者工具，提高开发人员开发和调试效率，开发 UI
+                组件单元测试，并提高测试覆盖率。
+              </p>
+              <p>
+                4. 负责我们的交易所和 Yubikey 项目的持续集成，整合 Circle CI 和 Github Actions
+                工作流到项目中，提高项目部署自动化水平。
+              </p>
+              <p>
+                5. 负责Vue3迁移项目的技术架构，引入 monorepo 最佳实践，开发 Playground 开发者工具并改进页面开发效率。
+              </p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2019.01-2022.04</p>
+            <div class="exp-list_top">
+              <img src="../candela.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span> 坎德拉 (深圳) 科技创新有限公司 </span>
+                  ／
+                  <span>平台研发部</span>
+                </strong>
+                <p>大前端组长</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Vue</span>
+              <span class="tagboard-tag">Gatsby</span>
+              <span class="tagboard-tag">Flutter</span>
+              <span class="tagboard-tag">Dart</span>
+              <span class="tagboard-tag">Typescript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 作为大前端技术团队的负责人，负责 Web 端、小程序、Flutter
+                App的项目管理和研发，负责移动端跨平台技术研发、项目管理、工程化和自动化部署。
+              </p>
+              <p>
+                2. 团队管理，任务安排与调度，跟进前端项目开发进度，改善前端工作流程和产品体验，参与产品需求、交互和
+                设计讨论，并制定合适的解决方案。
+              </p>
+              <p>
+                3. 团队建设，团队内部定期举行技术分享会，营造团队工程师文化氛围，
+                定期进行团队技术培训，提升团队技术水平和研发能力。
+              </p>
+              <p>
+                4. 负责前端机器人大屏监控，机器人远程控制，以及架构设计和技术研发，并使用 D3、fabricJS、ThreeJS
+                等开发可视化图形编辑工具。
+              </p>
+              <p>
+                5. 负责原生 iOS 和 Android 应用的跨平台技术架构设计，结合原生开发技术和 Flutter 跨平台技术混合开发，以
+                解决一套代码的多端复用问题。
+              </p>
+            </div>
+          </li>
+          <!-- <li class="work-exp_list">
+            <p class="exp-list_time">2018.09-2019.01</p>
+            <div class="exp-list_top">
+              <img src="../olympus-labs.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>OlympusLabs</span>
+                  ／
+                  <span>研发部</span>
+                </strong>
+                <p>前端开发工程师</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Typescript</span>
+              <span class="tagboard-tag">Web3.js</span>
+              <span class="tagboard-tag">Redux</span>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 负责 Web3 dapp 和 DeFi SDK 开发，前端对接以太坊智能合约和 imToken 钱包。</p>
+              <p>2. 开发 DeFi 衍生品管理系统 Olympus Portal 项目，提升前端用户体验和性能。</p>
+              <p>3. 将 dapp 与 Metamask 连接起来，构建用户钱包账户和交易数据可视化界面。</p>
+              <p>4. 改善前端工作流程和应用体验，参与产品需求、交互和设计讨论，并提供合适的解决方案。</p>
+            </div>
+          </li> -->
+          <li class="work-exp_list">
+            <p class="exp-list_time">2017.06-2019.01</p>
+            <div class="exp-list_top">
+              <img src="https://www.lgstatic.com/images/logo_default.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>Plum Flower International LLC</span>
+                  ／
+                  <span>研发部</span>
+                  /
+                  <span>全职远程</span>
+                </strong>
+                <p>前端组长</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Flow</span>
+              <span class="tagboard-tag">Jest</span>
+              <span class="tagboard-tag">NextJS</span>
+              <span class="tagboard-tag">Javascript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 担任7人前端开发团队技术负责人，负责前端项目技术研发。</p>
+              <p>2. 团队管理，任务安排与协调，跟进前端项目开发进度，完善技术文档。</p>
+              <p>3. 负责美国大型市政前端项目性能优化、前端架构设计和技术选型，负责前端工程和自动部署。</p>
+              <p>4. 提升前端工作流程和产品体验，参与产品需求、交互和设计讨论，并制定合适的解决方案。</p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2016.08-2017.06</p>
+            <div class="exp-list_top">
+              <img src="https://www.lgstatic.com/i/image/M00/13/24/CgqKkVbmuniACzKPAADYZIWvYYM207.png" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>风变科技(深圳)有限公司 </span>
+                  ／
+                  <span>研发部</span>
+                </strong>
+                <p>前端开发工程师</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">Vue</span>
+              <span class="tagboard-tag">VueX</span>
+              <span class="tagboard-tag">Node.js</span>
+              <span class="tagboard-tag">Javascript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 作为技术团队的核心成员，负责前端开发技术选型、技术架构、
+                前端页面重构、交互逻辑的实现以及前端数据处理，开发渐进式前端页面。
+              </p>
+              <p>
+                2. 使用Express Nodejs框架作为中间层开发前端数据接口，使用 Vue
+                前端框架开发图书管理系统，负责前端工程CI/CD。
+              </p>
+              <p>3. 负责制定前端发布流程和开发规范，设计微信 WebA pp 多页项目架构和工作流程。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /工作经历 -->
+
+      <!-- 项目经历 -->
+      <div class="mr-template pro-exp" id="proExp">
+        <div class="mr-template_title">
+          <span>项目经历</span>
+        </div>
+        <ol class="pro-exp_group">
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> Crypto.com 交易所 </span>
+            </p>
+            <p class="exp-list_time">2022.05-2023.01</p>
+            <div class="exp-project_des">
+              <p>
+                Crypto.com 交易所是使用 Vue2和 Vue3 框架开发的大型加密货币交易所应用，并在全球范围内拥有超过7000
+                万用户。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 使用 Vue2 和 Vue3 框架开发前端功能，开发UI组件并添加Jest单元测试，修复浏览器兼容性问题。</p>
+              <p>
+                2. 将 Circle CI 和 Github Actions 集成到 CI/CD
+                工作流程中，并集成错误监控工具到前端系统中，提升前端线上环境运行效率。
+              </p>
+              <p>3. 负责 Vue3 迁移项目架构设计，探索多页面和单页面应用工程化开发，提高项目的可维护性和可扩展性。</p>
+              <p>4. 申请和配置 AWS 基础设施资源，优化项目部署工作流程，提高前端部署效率。</p>
+            </div>
+          </li>
+          <!-- <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> Sender 钱包 </span>
+            </p>
+            <p class="exp-list_time">2022.07-Currently</p>
+            <div class="exp-project_des">
+              <p>
+                Sender 是一个基于 near 链构建的浏览器扩展钱包，其目标是为 DeFi 和 NFT
+                用户提供一个安全且易于使用的钱包应用。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 搭建基础技术架构，引入 React、Redux、Webpack 到插件开发。</p>
+              <p>2. 使用 ethers.js 和 near api 进行跨链功能开发，开发 Staking、Swap 和 NFT 功能。</p>
+              <p>3. 将 Ledger 和 Keystone 硬件钱包集成到 Sender 钱包，提升帐户交易安全性。</p>
+              <p>4. 负责跨浏览器兼容性问题的处理。</p>
+            </div>
+          </li> -->
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> 综合业务管理平台 </span>
+            </p>
+            <p class="exp-list_time">2019.02-2022.04</p>
+            <div class="exp-project_des">
+              <p>
+                综合业务管理平台是面向机器人行业的大型后台管理系统，集快递业务、外卖业务、机器人共享配送于一体
+                的业务系统。平台包括设备管控平台、机器人实时监控系统，监控中心、对账管理、用户管理、权限管理、消息中心及其他核心业务模块。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 用 React 和 Typescript 技术栈从零搭建后台管理系统的基础技术架构，制定前端开发、UI组件库、Jest
+                单元测试及 Git Workflow 规范。
+              </p>
+              <p>
+                2. 负责业务管理平台相关核心模块的技术研发，包括大屏数据监控、基于 Websocket
+                的机器人实时监控和控制，以及使用 D3 和 e-chart 构建机器人数据可视化。
+              </p>
+              <p>3. 为机器人平板应用和 Flutter App 开发版本控制管理系统，提高机器人平板应用部署和测试效率。</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> 驿站仓管 Flutter App </span>
+            </p>
+            <p class="exp-list_time">2020.08-2022.04</p>
+            <div class="exp-project_des">
+              <p>
+                驿站仓管是一个用 Flutter 开发的跨平台移动端机企业业务管理应用，主要核心业务包括设备管理，
+                智能装箱，扫码取件，外卖订单管理，共享订单管理，滞留件管理等，是一个机器人智能业务综合管理应用。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 搭建Flutter基础技术架构，开发Flutter公用组件模块。</p>
+              <p>2. 负责核心业务智能装箱，设备管理等核心业务的技术开发。</p>
+              <p>3. 负责 App 应用打包工程化相关业务流程，对接 Fastlane 和 Gradle 打包工具。</p>
+              <p>4. 开发了 Flutter 组件模块 cti_services, cti_widgets, cti_utils 等公共组件模块。</p>
+              <p>5. 引入 Redux 状态管理机制到 Flutter 应用，处理安卓和 iOS 跨平台兼容性问题。</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name">Aurora Company App</span>
+            </p>
+            <p class="exp-list_time">2018.05-2019.01</p>
+            <div class="exp-project_des">
+              <p>
+                Aurora Company App 是一款集职位发布、人才招聘、即时通讯为一体的企业招聘服务SaaS应用。
+                企业可在此平台发布招聘信息，与应聘者在线交流。用户端有 Aurora Candidate
+                App，普通用户可以在该发布简历，在平台上寻找合适的工作机会，同时可以与企业进行在线即时聊天，在线共享文件。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 作为前端开发负责人，带领来自全球的6位开发者进行远程开发协作，
+                制定详细的开发任务，合理分配任务给团队成员，并确保高效的团队协作。
+              </p>
+              <p>
+                2.设计前端基础设施和前端开发工作流程，制定统一的前端模块化开发标准，
+                为团队编写高质量的代码提供稳定的架构基础。
+              </p>
+              <p>
+                3. 统一前端代码规范，编写前端代码规范文档，规范前端代码风格，并建​​立代码风格 Check
+                Lists，为团队成员提供良好的编码基础。
+              </p>
+              <p>
+                4. 制定Git标准化工作流程和前端代码审查流程，与 DevOps 合作 开发人员制定 Web
+                应用的自动部署流程，以确保持续集成和持续交付。
+              </p>
+              <p>
+                5. 制定前端UI组件库的开发规范和标准，使用 Storybook 协同开发通用组件库和组件描述文档，使用 Rollup 将 UI
+                组件库打包压缩发布到 NPM 上，为多个 Web 应用的开发提供复用和扩展的可能性，
+                解决了多个应用程序之间耦合的问题。
+              </p>
+              <p>
+                6. 制定前端组件Jest测试规范，与团队成员共同编写组件测试用例，提高前端组件测试覆盖率，减少代码错误率。
+              </p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name">Eco Web App</span>
+              <!-- <span class="exp-project_company">
+                （<span>Plum Flower International LLC</span>）
+              </span> -->
+            </p>
+            <p class="exp-list_time">2017.06-2018.09</p>
+            <div class="exp-project_des">
+              <p>
+                EcoAppPro 是城市公用事业管理软件的新标准，是一种高效和现代的移动GIS集成系统。
+                该项目是一个响应式的大型前端项目，使用 React 技术栈开发，包括 Communications、User
+                Center、Assets、System Manager、Personnel 和 Logbook 模块。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 作为前端技术负责人，设计和搭建前端技术基础设施，带领 5名前端成员协同开发，制定合理的开发任务。</p>
+              <p>
+                2. 编写比较通用的前端开发标准，在 Jira 上给团队成员分配任务，审查成员代码，
+                控制前端开发进度，实现敏捷项目开发。
+              </p>
+              <p>
+                3. 项目中使用的技术栈包括 React, Redux, React-router, Recompose, Redux-saga, Flow 和
+                Semantic-ui-react等，并利用上述技术栈构建稳定高效的前端技术架构，设计和开发可重用的前端基础组件。
+              </p>
+              <p>
+                4. 使用 Webpack 实现一系列的工程开发，包括压缩打包前端资源文件，前端 CSS 样式文件的生成与合并，前端 JS
+                代码分割和异步加载，并使用 CDN 缓存服务来提高 Web 性能和 Web 应用程序的体验。
+              </p>
+              <p>5. 使用 Jest 测试工具搭建前端测试环境，为组件编写完整的单元测试用例，提高组件质量和测试覆盖率。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /项目经历 -->
+
+      <!-- 教育经历 -->
+      <div class="mr-template edu-exp" id="eduExp">
+        <div class="mr-template_title">
+          <span>教育经历</span>
+        </div>
+        <ol class="edu-exp_group">
+          <li class="edu-exp_list">
+            <p class="exp-list_time">2021-至今</p>
+            <div class="exp-list_top">
+              <div class="exp-list_right">
+                <strong>深圳大学</strong>
+                <p>本科 / 计算机科学与应用</p>
+              </div>
+            </div>
+          </li>
+          <li class="edu-exp_list">
+            <p class="exp-list_time">2013-2016</p>
+            <div class="exp-list_top">
+              <div class="exp-list_right">
+                <strong>深圳职业技术学院</strong>
+                <p>大专 / 通信技术</p>
+              </div>
+            </div>
+          </li>
+          <li class="edu-exp_list">
+            <p class="exp-list_time">CET-6</p>
+            <div class="exp-list_top">
+              <div class="exp-list_right">
+                <strong>英语</strong>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /教育经历 -->
+
+      <!-- 社交主页 -->
+      <div class="mr-template social-page" id="socialPage">
+        <div class="mr-template_title">
+          <span>社交主页</span>
+        </div>
+        <ol class="social-page_group">
+          <li class="social-page_list">
+            <div class="social-page_content">
+              <img src="https://www.lgstatic.com/common/image/social/github@2x.png" alt="Github" />
+              <a href="http://github.com/chachaxw">http://github.com/chachaxw</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <!-- /社交主页 -->
+    </div>
+  </body>
+</html>
