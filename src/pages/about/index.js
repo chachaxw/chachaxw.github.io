@@ -65,24 +65,25 @@ const CareersPage = () => {
           </h1>
           <div ref={textRef}>
             <p className="my-5 md:my-8">
-              Hello, I'm Chacha Chou(周伟), a front-end developer with over 7 years experience, welcome to my Website!
+              Hello, I'm Chacha Chou(周伟), a front-end developer with over 8 years experience, now all in web3 and
+              travel the world as a digital nomad, welcome to my website!
             </p>
             <p className="mb-5 md:mb-16">
               Proficient in emerging front-end frameworks such as <span className="font-bold">React</span>,{' '}
-              <span className="font-bold">VueJS</span>, <span className="font-bold">Angular</span>,{' '}
-              <span className="font-bold">ThreeJS</span>, and also focusing on{' '}
-              <span className="font-bold">Flutter</span> and <span className="font-bold">React-Native</span> framework
-              for building multi-platform applications.
+              <span className="font-bold">VueJS</span>, <span className="font-bold">Web3.js</span>,{' '}
+              <span className="font-bold">Ethers.js</span>, <span className="font-bold">ThreeJS</span>, and also
+              focusing on <span className="font-bold">Flutter</span> and <span className="font-bold">React-Native</span>{' '}
+              framework for building multi-platform applications.
             </p>
             <p>
               During my careers, I have developed some large PC-side and mobile-side responsive web project, pure{' '}
               <span className="font-bold">Flutter</span> cross platform mobile native app,{' '}
               <span className="font-bold">React-Native</span> hybrid app, and developed WeChat{' '}
               <span className="font-bold">Mini-program</span>, and written some{' '}
-              <span className="font-bold">NodeJS</span>. Having large scale front-end project development experience and
-              <span className="font-bold">Architecture Design</span> experience, over 4 years of front-end{' '}
-              <span className="font-bold">Team Management</span> experience, and able to stand alone from{' '}
-              <span className="font-bold">design to development</span>.
+              <span className="font-bold">NodeJS</span> and <span className="font-bold">Solidity</span>. Having large
+              scale front-end project development experience and <span className="font-bold">Architecture Design</span>{' '}
+              experience, over 4 years of front-end <span className="font-bold">Team Management</span> experience, and
+              able to stand alone from <span className="font-bold">design to development</span>.
             </p>
             <div className="flex justify-between items-center mt-14">
               <span className="block w-10 bg-slate-900" style={{ minHeight: 2 }} />
