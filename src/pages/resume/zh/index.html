@@ -376,6 +376,8 @@
       .work-exp .work-exp_list .exp-list_top img {
         width: 46px;
         height: 46px;
+        border-radius: 23px;
+        overflow: hidden;
         margin-right: 10px;
       }
 
@@ -556,6 +558,7 @@
 
       .social-page .social-page_list .social-page_content {
         display: flex;
+        align-items: center;
       }
 
       .social-page .social-page_list .social-page_content img {
@@ -591,14 +594,7 @@
       <!-- 基本信息 -->
       <div class="basic" id="baseInfo">
         <div class="basic-photo">
-          <img
-            class="mr_headimg user-avatar"
-            id="userpic"
-            src="https://www.lgstatic.com/i/image2/M01/6A/AB/CgotOVtL-RCAEaEBAAHWAI81Guc485.jpg"
-            width="120"
-            height="120"
-            alt="头像"
-          />
+          <img class="mr_headimg user-avatar" id="userpic" src="../avatar.jpeg" width="120" height="120" alt="头像" />
         </div>
         <div class="basic-info">
           <div class="basic-name-area">
@@ -610,9 +606,9 @@
             <span class="basic-job">资深软件开发工程师</span>
           </p>
           <p class="basic-self">
-            <span class="basic-exp">8年开发经验 / </span>
+            <span class="basic-exp">9年开发经验 / </span>
             <span class="basic-edu">大专 / </span>
-            <span class="basic-age">30 岁</span>
+            <span class="basic-age">30岁</span>
           </p>
           <p>
             <span class="basic-tel">
@@ -645,7 +641,7 @@
         <div class="per-self_content">
           <div class="per-self_des">
             <p>
-              超过8年的前端经验，在此期间开发了诸多项目，包括 <b>React</b> 和 <b>Vue</b> 大型 Web 应用、区块链
+              超过9年的前端开发经验，在此期间开发了诸多项目，包括 <b>React</b> 和 <b>Vue</b> 大型 Web 应用、区块链
               <b>Web3</b> 应用、<b>Solidity</b> 智能合约、<b>React-Native</b> App、微信小程序、<b>Flutter</b>
               跨平台App，也有一定的 <b>Nodejs</b> 经验，曾作为10名开发团队技术负责人。
             </p>
@@ -661,12 +657,46 @@
         </div>
         <ol class="work-exp_group">
           <li class="work-exp_list">
+            <p class="exp-list_time">2023.12-至今</p>
+            <div class="exp-list_top">
+              <img src="../fameex.jpg" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>FameEX (迪拜)</span>
+                  /
+                  <span>研发部</span>
+                </strong>
+                <p>资深前端开发工程师</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Redux</span>
+              <span class="tagboard-tag">NextJS</span>
+              <span class="tagboard-tag">Typescript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 负责 FameEX
+                交易所现货业务开发，包括现货行情，K线图，订单薄，现货下单，现货持仓订单等核心模块，开发高性能和可复用组件。
+              </p>
+              <p>
+                2. 负责 FameEX
+                交易所合约业务重构和开发，包括合约行情，K线图，订单薄，合约下单，合约持仓订单等核心模块，提高交易页面性能和响应速度。
+              </p>
+              <p>3. 负责 FameEX 交易所登录注册业务模块重构和页面开发，修复和解耦业务逻辑问题。</p>
+              <p>4. 负责 FameEX 交易所跟单业务开发，包括跟单广场，用户跟单列表，用户跟单持仓等核心模块。</p>
+            </div>
+          </li>
+          <li class="work-exp_list">
             <p class="exp-list_time">2023.02-2023-09</p>
             <div class="exp-list_top">
               <img src="../sender.png" alt="Logo" />
               <div class="exp-list_right">
                 <strong class="exp-list_title">
                   <span>Sender Wallet</span>
+                  /
+                  <span>全职远程</span>
                 </strong>
                 <p>资深软件开发工程师</p>
               </div>
@@ -878,7 +908,33 @@
         <ol class="pro-exp_group">
           <li class="pro-exp_list">
             <p class="exp-list_title">
-              <span class="exp-project_name">Sender Wallet</span>
+              <span class="exp-project_name">FameEX 交易所</span>
+            </p>
+            <p class="exp-list_time">2023.12-至今</p>
+            <div class="exp-project_des">
+              <p>
+                FameEX 交易所是一家新兴的全球加密资产交易所，为加密用户提供安全、简单的加密货币衍生品和现货交易服务。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 使用 React, Typescript 和 NextJS 开发交易所核心业务，包括通用组件开发，核心业务页面和业务逻辑开发。
+              </p>
+              <p>
+                2. 负责现货和合约业务K线图行情模块，利用 TradingView 开发高性能K线图组件，提高前端K线图及时性和可用性。
+              </p>
+              <p>
+                3. 负责现货和合约业务订单薄组件开发，利用 Websocket
+                技术开发及时响应的订单薄列表，提升订单薄列表组件渲染性能和响应速度。
+              </p>
+              <p>4. 开发交易所现货和合约下单，最新成交模块，包括限价单，市价单，委托单，止盈止损等核心业务等开发。</p>
+              <p>5. 负责交易所现货持仓列表，历史订单列表，交易列表等业务，提升列表性能和数据响应及时性。</p>
+              <p>6. 解决交易所现货和合约业务跨浏览器兼容性问题，以及移动端平台页面响应式和兼容性问题的处理。</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name">Sender Wallet 钱包</span>
             </p>
             <p class="exp-list_time">2023.02-2023.08</p>
             <div class="exp-project_des">
@@ -1061,7 +1117,7 @@
             </div>
           </li>
           <li class="edu-exp_list">
-            <p class="exp-list_time">CET-6</p>
+            <p class="exp-list_time">CET-6 / Fluent</p>
             <div class="exp-list_top">
               <div class="exp-list_right">
                 <strong>英语</strong>
