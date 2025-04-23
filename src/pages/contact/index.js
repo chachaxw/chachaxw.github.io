@@ -62,7 +62,7 @@ const ContactPage = () => {
                 <FaZhihu className="text-2xl" />
               </div>
             </a>
-            <a href="https://twitter.com/ChachaChou18" target="_blank" rel="noreferrer">
+            <a href="https://twitter.com/ChachaCryptoX" target="_blank" rel="noreferrer">
               <div className="icon twitter relative flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg mx-2 md:mx-5">
                 <div className="tooltip">Twitter</div>
                 <FaTwitter className="text-xl" />
