@@ -191,6 +191,14 @@
         transform: translateY(-50%);
       }
 
+      .mr-template .mr-template_title.core-skills {
+        margin-top: 20px;
+      }
+
+      .mr-template .core-skill-list li {
+        margin-top: 16px;
+      }
+
       .mr-template .mr_md_del {
         display: none;
       }
@@ -648,6 +656,16 @@
             </p>
           </div>
         </div>
+        <div class="mr-template_title core-skills">
+          <span>核心技能</span>
+        </div>
+        <ul class="core-skill-list">
+          <li><b>Flutter/Dart：</b>熟悉 Flutter 跨平台架构设计，组件封装，动画处理，性能优化，原生模块集成</li>
+          <li><b>移动平台：</b>熟悉 Android 与 iOS 应用打包、平台特性、Flutter 原生通信, React-Native 跨平台开发</li>
+          <li><b>状态管理：</b>Redux、Provider、Riverpod、Bloc、Zustand</li>
+          <li><b>前端开发：</b>React、Vue、Typescript，组件库设计与 Web3 Dapp 开发</li>
+          <li><b>工程化：</b>CI/CD（Fastlane、GitHub Actions）、自动打包部署、版本控制</li>
+        </ul>
       </div>
       <!-- /自我描述 -->
 
@@ -672,21 +690,19 @@
             </div>
             <div class="tagboard">
               <span class="tagboard-tag">React</span>
-              <span class="tagboard-tag">Redux</span>
+              <span class="tagboard-tag">Zustand</span>
               <span class="tagboard-tag">NextJS</span>
               <span class="tagboard-tag">Typescript</span>
             </div>
             <div class="exp-list_content">
               <p>
-                1. 负责 FameEX
-                交易所现货业务开发，包括现货行情，K线图，订单薄，现货下单，现货持仓订单等核心模块，开发高性能和可复用组件。
+                1. 负责
+                FameEX交易所现货业务开发，包括现货行情，K线图，订单薄，现货下单，现货持仓订单等核心模块，开发高性能和可复用组件。
               </p>
-              <p>
-                2. 负责 FameEX
-                交易所合约业务重构和开发，包括合约行情，K线图，订单薄，合约下单，合约持仓订单等核心模块，提高交易页面性能和响应速度。
-              </p>
-              <p>3. 负责 FameEX 交易所登录注册业务模块重构和页面开发，修复和解耦业务逻辑问题。</p>
-              <p>4. 负责 FameEX 交易所跟单业务开发，包括跟单广场，用户跟单列表，用户跟单持仓等核心模块。</p>
+              <p>2. 负责合约业务重构和开发，包括合约行情，K线图，订单薄，合约下单，合约持仓订单等核心模块。</p>
+              <p>3. 负责登录注册业务模块重构和页面开发，修复和解耦业务逻辑问题。</p>
+              <p>4. 负责合约跟单业务开发，包括跟单广场，用户跟单列表，用户跟单持仓等核心模块。</p>
+              <p>5. 负责交易所前端页面渲染性能提升和即时通信性能优化，前端缓存优化，提高交易页面性能和响应速度。</p>
             </div>
           </li>
           <li class="work-exp_list">
@@ -711,7 +727,7 @@
             <div class="exp-list_content">
               <p>1. 负责 Sender 多链钱包插件端业务开发，包括 EVM 链功能开发，Ton 链功能开发和 Near 链功能开发。</p>
               <p>
-                2. 负责 Sender 插件端 Dapp 功能开发，包括 Ethereum Provdier 和 Near Provider API 设计与开发，为第三方
+                2. 负责 Sender 插件端 Dapp 功能开发，包括 Ethereum Provider 和 Near Provider API 设计与开发，为第三方
                 Dapp 提供钱包接入 API 和 开发文档。
               </p>
               <p>3. 为 Near 钱包开源项目 wallet-selector 贡献代码，根据 Near API 标准开发 Sender Wallet API。</p>
@@ -811,7 +827,7 @@
               </p>
             </div>
           </li>
-          <li class="work-exp_list">
+          <!-- <li class="work-exp_list">
             <p class="exp-list_time">2018.09-2019.01</p>
             <div class="exp-list_top">
               <img src="../olympus-labs.png" alt="Logo" />
@@ -836,9 +852,9 @@
               <p>3. 将 dapp 与 Metamask 连接起来，构建用户钱包账户和交易数据可视化界面。</p>
               <p>4. 改善前端工作流程和应用体验，参与产品需求、交互和设计讨论，并提供合适的解决方案。</p>
             </div>
-          </li>
+          </li> -->
           <li class="work-exp_list">
-            <p class="exp-list_time">2017.06-2018.08</p>
+            <p class="exp-list_time">2017.06-2018.12</p>
             <div class="exp-list_top">
               <img src="https://www.lgstatic.com/images/logo_default.png" alt="Logo" />
               <div class="exp-list_right">
@@ -1006,14 +1022,15 @@
             <p class="exp-list_time">2020.08-2022.04</p>
             <div class="exp-project_des">
               <p>
-                建图采点工具是一个用 Flutter 开发的跨平台移动端机器人建图采点标记应用，主要核心业务是通过蓝牙连接机器人，
+                建图采点工具是一个用 Flutter
+                开发的跨平台移动端机器人建图采点标记应用，主要核心业务是通过蓝牙连接机器人，
                 获取机器人的采点图形，在App端编辑采点图形和标记关键路径，并同步采点数据至业务平台。
               </p>
             </div>
             <div class="exp-list_content">
-              <p>1. 搭建Flutter基础技术架构，开发Flutter公用组件模块。</p>
+              <p>1. 搭建Flutter基础技术架构, 利用 MVVM 开发模式开发App基础业务。</p>
               <p>2. 负责楼层图机器人路径标记及路径编辑功能等核心功能的技术开发。</p>
-              <p>3. 利用Canvas图形能力提升编辑性能</p>
+              <p>3. 利用Canvas图形能力提升路径图编辑性能</p>
               <p>4. 解决并处理安卓和iOS跨平台兼容性问题。</p>
             </div>
           </li>
@@ -1036,7 +1053,7 @@
               <p>5. 引入 Redux 状态管理机制到 Flutter 应用，处理安卓和iOS跨平台兼容性问题。</p>
             </div>
           </li>
-<!--           <li class="pro-exp_list">
+          <!--           <li class="pro-exp_list">
             <p class="exp-list_title">
               <span class="exp-project_name">Aurora Company App</span>
             </p>
