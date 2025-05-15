@@ -11,7 +11,7 @@ import './layout.scss';
 const Layout = ({ title, description, children }) => {
   useEffect(() => {
     console.log(
-      '%c  Developed and Designed by Chacha Chou — https://github.com/chachaxw  ',
+      '%c  Developed and Designed by Chacha Zhou — https://github.com/chachaxw  ',
       'background-color: #ff0844; color: #f9d63d; font-size:10px; padding: 6px; border-radius:4px;'
     );
   }, []);

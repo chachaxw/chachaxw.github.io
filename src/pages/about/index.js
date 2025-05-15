@@ -53,7 +53,7 @@ const CareersPage = () => {
   return (
     <Layout>
       <div className="w-full h-screen fixed retro-blend-darken">
-        <img src={myself} alt="Chacha Chou" className="absolute right-0" style={{ width: '60%' }} />
+        <img src={myself} alt="Chacha Zhou" className="absolute right-0" style={{ width: '60%' }} />
       </div>
       <section className="absolute top-0 w-full h-screen flex text-slate-900" ref={sectionRef1}>
         <div
@@ -61,11 +61,11 @@ const CareersPage = () => {
           ref={contentRef}
         >
           <h1 className="charming-text text-3xl md:text-5xl font-bold mt-8 relative" id="title" ref={titleRef}>
-            Chacha Chou
+            Chacha Zhou
           </h1>
           <div ref={textRef}>
             <p className="my-5 md:my-8">
-              Hello, I'm Chacha Chou(周伟), a front-end developer with over 8 years experience, now all in web3 and
+              Hello, I'm Chacha Zhou, a front-end developer with over 9 years experience, now all in web3 and
               travel the world as a digital nomad, welcome to my website!
             </p>
             <p className="mb-5 md:mb-16">

@@ -53,7 +53,7 @@ const CareersPage = () => {
     });
 
     scrollRef.current.on('scroll', handleScroll);
-  }, [handleScroll]);
+  }, [isMobile, handleScroll]);
 
   const handleScrollTo = () => {
     const target = document.querySelector('#myCareers');

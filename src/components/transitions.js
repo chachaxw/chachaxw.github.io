@@ -93,7 +93,7 @@ const Transitions = ({ isOpened, direction, duration, onUpdate }) => {
     if (onUpdate) {
       onUpdate(true);
     }
-  }, [setPaths, onUpdate]);
+  }, [setPaths, onUpdate, svgRef.current]);
 
   useEffect(() => {
     renderLoop();
