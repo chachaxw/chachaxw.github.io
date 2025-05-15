@@ -195,6 +195,15 @@
         display: none;
       }
 
+      .mr-template .mr-template_title.core-skills {
+        margin-top: 20px;
+      }
+
+      .mr-template .core-skill-list li {
+        margin-top: 16px;
+        line-height: 1.5;
+      }
+
       /***** 基本信息 ****/
 
       .basic {
@@ -448,7 +457,7 @@
 
       .pro-exp .pro-exp_list .exp-list_title .exp-project_name,
       .pro-exp .pro-exp_list .exp-list_title .exp-project_company span {
-        max-width: 400px;
+        max-width: 500px;
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -465,6 +474,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        margin-top: 0;
       }
 
       .pro-exp .pro-exp_list .exp-list_content,
@@ -599,12 +609,12 @@
             <p class="basic-name female">Chacha Zhou(周伟)</p>
           </div>
           <p>
-            <span class="basic-job">Senior Software Engineer</span>
+            <span class="basic-job">Senior Flutter & Front-end Engineer</span>
           </p>
           <p class="basic-self">
             <span class="basic-exp">9 Years Experience / </span>
             <span class="basic-edu">College Degree / </span>
-            <span class="basic-age">30 Years Old</span>
+            <span class="basic-age">31 Years Old</span>
           </p>
           <p>
             <span class="basic-tel">
@@ -634,13 +644,44 @@
             <span class="tagboard-tag">English</span>
           </div>
         </div>
+        <ul class="core-skill-list">
+          <li>
+            <b>Flutter/Dart:</b> Proficient in <b>Flutter</b> architecture design, custom widget development, animation
+            handling, performance optimization, and platform channel integration with native <b>Android/iOS</b>.
+          </li>
+          <li>
+            <b>Mobile Platforms:</b> Familiar with <b>Android</b> and <b>iOS</b> app packaging, native features, and <b>Flutter-native</b>
+            interoperability.
+          </li>
+          <li>
+            <b>State Management:</b> Experienced with <b>React</b>, <b>Provider</b>, and <b>Bloc</b> for managing complex
+            application states.
+          </li>
+          <li>
+            <b>Frontend Development:</b> Skilled in <b>React</b>, <b>Vue</b>, and <b>TypeScript</b>; capable of designing component libraries
+            and developing <b>Web3 Dapps</b>.
+          </li>
+          <li>
+            <b>DevOps & Tooling:</b> Experienced with <b>CI/CD</b> workflows (Fastlane, GitHub Actions), automated build and
+            deployment processes, and version control systems.
+          </li>
+        </ul>
         <div class="per-self_content">
           <div class="per-self_des">
-            <p>
+            <!-- <p>
               Over 9 years of front-end experience, and developed many projects during this time, including
               <b>React</b> and <b>Vue</b> web app, <b>Blockchain Web3</b> dapp, <b>Solidity</b> smart contract,
               <b>ReactNative</b> app, <b>Flutter</b> cross-platform hybrid app, and also have some
               <b>Nodejs</b> experience, and as a team leader of 10 members before.
+            </p> -->
+            <p>
+              With 9 years of software development experience, I have focused in recent years on Flutter cross-platform
+              mobile application development. I have led multiple enterprise-level Flutter app projects involving
+              complex features such as image recognition, Bluetooth communication, warehouse management, and robot path
+              mapping. I am proficient in integrating Flutter with native iOS/Android platforms and skilled in component
+              abstraction, state management (e.g., Provider, Redux), performance optimization, and engineering
+              workflows. In addition, I have a solid background in React and Vue-based frontend development, enabling
+              full-stack delivery from web to mobile platforms.
             </p>
           </div>
         </div>
@@ -912,7 +953,7 @@
           <li class="work-exp_list">
             <p class="exp-list_time">2016.08-2017.06</p>
             <div class="exp-list_top">
-              <img src="https://www.lgstatic.com/i/image/M00/13/24/CgqKkVbmuniACzKPAADYZIWvYYM207.png" alt="Logo" />
+              <img src="./forchange.jpg" alt="Logo" />
               <div class="exp-list_right">
                 <strong class="exp-list_title">
                   <span>ForChange LLC</span>
@@ -947,7 +988,7 @@
               </p>
             </div>
           </li>
-          <li class="work-exp_list">
+          <!-- <li class="work-exp_list">
             <p class="exp-list_time">2015.11-2016.08</p>
             <div class="exp-list_top">
               <img
@@ -976,7 +1017,7 @@
                 to build video editor O2O platform.
               </p>
             </div>
-          </li>
+          </li> -->
         </ol>
       </div>
       <!-- /工作经历 -->
@@ -1030,6 +1071,33 @@
           </li>
           <li class="pro-exp_list">
             <p class="exp-list_title">
+              <span class="exp-project_name"> Sender Wallet </span>
+            </p>
+            <p class="exp-list_time">2023.01-2023.09</p>
+            <div class="exp-project_des">
+              <p>
+                Sender is a browser extension wallet built for near protocol, with the goal of providing a secure and
+                easy-to-use wallet for DeFi and NFT users.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Build the basic technical architecture, and introduce <b>React</b>, <b>Redux</b> and
+                <b>Webpack</b> to extension development.
+              </p>
+              <p>
+                2. Use <b>ethers.js</b> and <b>near api</b> to build cross multi-chain features, and develop
+                <b>Staking</b>, <b>Swap</b> and <b>NFT</b> features.
+              </p>
+              <p>
+                3. Connect <b>Ledger</b> and <b>Keystone</b> hardware wallet to Sender wallet and improve account
+                security.
+              </p>
+              <p>4. Responsible for handling <b>cross-browser compatibility</b> issues.</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
               <span class="exp-project_name"> Crypto.com Exchange </span>
             </p>
             <p class="exp-list_time">2022.05-2023.01</p>
@@ -1061,33 +1129,6 @@
           </li>
           <li class="pro-exp_list">
             <p class="exp-list_title">
-              <span class="exp-project_name"> Sender Wallet </span>
-            </p>
-            <p class="exp-list_time">2022.07-Currently</p>
-            <div class="exp-project_des">
-              <p>
-                Sender is a browser extension wallet built for near protocol, with the goal of providing a secure and
-                easy-to-use wallet for DeFi and NFT users.
-              </p>
-            </div>
-            <div class="exp-list_content">
-              <p>
-                1. Build the basic technical architecture, and introduce <b>React</b>, <b>Redux</b> and
-                <b>Webpack</b> to extension development.
-              </p>
-              <p>
-                2. Use <b>ethers.js</b> and <b>near api</b> to build cross multi-chain features, and develop
-                <b>Staking</b>, <b>Swap</b> and <b>NFT</b> features.
-              </p>
-              <p>
-                3. Connect <b>Ledger</b> and <b>Keystone</b> hardware wallet to Sender wallet and improve account
-                security.
-              </p>
-              <p>4. Responsible for handling <b>cross-browser compatibility</b> issues.</p>
-            </div>
-          </li>
-          <li class="pro-exp_list">
-            <p class="exp-list_title">
               <span class="exp-project_name"> Large Scale Business Management Platform </span>
             </p>
             <p class="exp-list_time">2019.02-2022.4</p>
@@ -1113,26 +1154,93 @@
           </li>
           <li class="pro-exp_list">
             <p class="exp-list_title">
+              <span class="exp-project_name"> Mapping & Path Annotation Tool (Flutter Cross-Platform App) </span>
+            </p>
+            <p class="exp-list_time">2021.05-2022.4</p>
+            <div class="exp-project_des">
+              <p>
+                This is a cross-platform mobile application developed using Flutter, designed for robot mapping and path
+                annotation. The app connects to robots via Bluetooth, retrieves mapping data (e.g., floor plans and
+                coordinates), allows users to edit and annotate paths directly on the UI, and synchronizes the data with
+                a backend platform for further task automation and analytics.
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. Built the core Flutter architecture from scratch, following the <b>MVVM</b> architectural pattern,
+                with clear separation of business logic and UI presentation.
+              </p>
+              <p>
+                2. Designed and implemented key modules such as floor plan rendering, robot path visualization,
+                interactive path annotation, and real-time data editing.
+              </p>
+              <p>
+                3. Leveraged the <b>Canvas API</b> and <b>CustomPainter</b> to render large-scale vector maps and enable
+                smooth, high-performance path drawing/editing interactions.
+              </p>
+              <p>
+                4. Abstracted reusable components for Bluetooth device scanning, data synchronization, and interactive
+                path nodes, improving overall maintainability and scalability.
+              </p>
+              <p>
+                5. Integrated <b>Platform Channels</b> to enable native-level Bluetooth communication and background
+                services for data fetching and processing.
+              </p>
+              <p>
+                6. Addressed and resolved multiple <b>cross-platform compatibility</b> issues between Android and iOS,
+                including gesture handling, device permission management, and rendering differences.
+              </p>
+              <p>
+                7. Used <b>Provider</b> for scalable state management, with modular services for map data storage,
+                editing actions, and UI feedback.
+              </p>
+              <p>
+                8. Conducted performance profiling and optimizations (e.g., widget tree flattening, repaint boundary
+                management) to ensure a responsive editing experience on low-end devices.
+              </p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
               <span class="exp-project_name"> Post Warehouse Management Flutter App </span>
             </p>
             <p class="exp-list_time">2020.08-2021.10</p>
             <div class="exp-project_des">
               <p>
-                Post Warehouse Management is a cross-platform mobile enterprise business management application
-                developed with Flutter. The main core businesses include device management, scanning code pickup, order
-                management, etc. It is a robotic intelligent business management application.
+                This is a cross-platform enterprise logistics management application developed using Flutter. It is
+                designed for use in warehouse stations to handle robot-related operational tasks, including device
+                management, intelligent package sorting, parcel scanning, delivery tracking, and exception handling.
               </p>
             </div>
             <div class="exp-list_content">
               <p>
-                1. Build the basic <b>technical architecture</b> of <b>Flutter</b> and develop the core business logic.
+                1. Built the foundational <b>Flutter application architecture</b>, implementing shared module layers and
+                adapting the design to support Android and iOS platforms simultaneously.
               </p>
               <p>
-                2. Developed Flutter component modules, including <b>cti_services</b>, <b>cti_widgets</b>,
-                <b>cti_utils</b> and other common component modules.
+                2. Developed multiple core business modules such as device management, smart packaging workflow, QR
+                code-based parcel scanning, and order exception tracking.
               </p>
-              <p>3. Introducing <b>Redux</b> state management mechanism to Flutter applications.</p>
-              <p>4. Responsible for handling Android and iOS <b>cross-platform compatibility</b> issues.</p>
+              <p>
+                3. Introduced <b>Redux</b> for global state management across modules to ensure consistent data flow and
+                reduce complexity in multi-screen interactions.
+              </p>
+              <p>
+                4. Created and maintained internal Flutter component libraries, including: 
+                <div><b>cti_services</b>: encapsulated service layer for data access and business logic.</div>
+                <div><b>cti_widgets</b>: reusable UI components with unified
+                design and behavior.</div>
+                <div><b>cti_utils</b>: utility functions for common tasks (e.g., formatting, parsing, API helpers).</div>
+              </p>
+              <p>
+                5. Designed and implemented a complete CI/CD workflow using <b>Fastlane</b> and <b>Gradle</b> to automate app packaging, signing, and release across staging and production environments.
+              </p>
+              <p>
+                6. Solved various platform-specific issues including <b>image processing</b>, <b>camera integration</b>, <b>barcode scanning compatibility</b>, and <b>push notifications</b> across Android and iOS.
+              </p>
+              <p>
+                7. Collaborated with backend engineers to define API contracts, handle token-based authentication, and ensure robust error handling for offline scenarios.
+              </p>
             </div>
           </li>
           <!-- <li class="pro-exp_list">
@@ -1184,16 +1292,16 @@
               </p>
             </div>
           </li> -->
-          <li class="pro-exp_list">
+          <!-- <li class="pro-exp_list">
             <p class="exp-list_title">
               <span class="exp-project_name"> OlympusLabs Dapp and DeFi SDK </span>
+              <p class="exp-list_time">2018.08-2019.01</p>
             </p>
-            <p class="exp-list_time">2018.08-2019.01</p>
             <div class="exp-project_des">
               <p>
                 Olympus Labs is building a protocol for developing tokenized cryptocurrency financial products such as
                 indices, funds, lending products, futures, options, and more. The Olympus Protocol in turn powers an
-                ecosystem of cryptocurrency fintech DApps.
+                ecosystem of cryptocurrency fintech Dapps.
               </p>
             </div>
             <div class="exp-list_content">
@@ -1212,15 +1320,15 @@
               </p>
               <p>5. Responsible for handling <b>cross-browser compatibility</b> issues.</p>
             </div>
-          </li>
+          </li> -->
           <li class="pro-exp_list">
             <p class="exp-list_title">
               <span class="exp-project_name">Eco Web App</span>
               <!-- <span class="exp-project_company">
                 （<span>Plum Flower International LLC</span>）
               </span> -->
+              <p class="exp-list_time">2017.06-2018.09</p>
             </p>
-            <p class="exp-list_time">2017.06-2018.09</p>
             <div class="exp-project_des">
               <p>
                 EcoAppPro is the new standard for urban utility management software and is an efficient and modern

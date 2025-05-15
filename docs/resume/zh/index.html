@@ -5,7 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <link rel="alternate" media="handheld" href="#" />
     <meta charset="utf-8" />
-    <title>周伟 - 资深软件开发工程师</title>
+    <title>Chacha Zhou(周伟) - 资深软件开发工程师</title>
     <style>
       * {
         outline: none;
@@ -191,6 +191,14 @@
         transform: translateY(-50%);
       }
 
+      .mr-template .mr-template_title.core-skills {
+        margin-top: 20px;
+      }
+
+      .mr-template .core-skill-list li {
+        margin-top: 24px;
+      }
+
       .mr-template .mr_md_del {
         display: none;
       }
@@ -366,6 +374,7 @@
         color: #444;
         position: absolute;
         right: 0;
+        margin-top: 0;
       }
 
       .work-exp .work-exp_list .exp-list_top {
@@ -376,6 +385,8 @@
       .work-exp .work-exp_list .exp-list_top img {
         width: 46px;
         height: 46px;
+        border-radius: 23px;
+        overflow: hidden;
         margin-right: 10px;
       }
 
@@ -464,6 +475,7 @@
         position: absolute;
         right: 0;
         top: 0;
+        margin-top: 0;
       }
 
       .pro-exp .pro-exp_list .exp-list_content,
@@ -556,6 +568,7 @@
 
       .social-page .social-page_list .social-page_content {
         display: flex;
+        align-items: center;
       }
 
       .social-page .social-page_list .social-page_content img {
@@ -591,28 +604,19 @@
       <!-- 基本信息 -->
       <div class="basic" id="baseInfo">
         <div class="basic-photo">
-          <img
-            class="mr_headimg user-avatar"
-            id="userpic"
-            src="https://www.lgstatic.com/i/image2/M01/6A/AB/CgotOVtL-RCAEaEBAAHWAI81Guc485.jpg"
-            width="120"
-            height="120"
-            alt="头像"
-          />
+          <img class="mr_headimg user-avatar" id="userpic" src="../avatar.jpeg" width="120" height="120" alt="头像" />
         </div>
         <div class="basic-info">
           <div class="basic-name-area">
             <p class="basic-name female">周伟(Chacha Zhou)</p>
           </div>
           <p>
-            <span class="basic-company">Freelancer</span>
-            <span> / </span>
-            <span class="basic-job">资深软件开发工程师</span>
+            <span class="basic-job">资深前端开发工程师</span>
           </p>
           <p class="basic-self">
-            <span class="basic-exp">8年开发经验 / </span>
+            <span class="basic-exp">9年开发经验 / </span>
             <span class="basic-edu">大专 / </span>
-            <span class="basic-age">30 岁</span>
+            <span class="basic-age">30岁</span>
           </p>
           <p>
             <span class="basic-tel">
@@ -642,12 +646,20 @@
             <span class="tagboard-tag">英语</span>
           </div>
         </div>
+        <ul class="core-skill-list">
+          <li><b>Flutter/Dart：</b>熟悉 Flutter 跨平台架构设计，组件封装，动画处理，性能优化，原生模块集成</li>
+          <li><b>移动平台：</b>熟悉 Android 与 iOS 应用打包、平台特性、Flutter 原生通信, React-Native 跨平台开发</li>
+          <li><b>状态管理：</b>Redux、Provider、Riverpod、Bloc、Zustand</li>
+          <li><b>前端开发：</b>React、Vue、Typescript，组件库设计与 Web3 Dapp 开发</li>
+          <li><b>工程化：</b>CI/CD（CircleCI、GitHub Actions）、自动打包部署、版本控制</li>
+        </ul>
         <div class="per-self_content">
           <div class="per-self_des">
             <p>
-              超过8年的前端经验，在此期间开发了诸多项目，包括 <b>React</b> 和 <b>Vue</b> 大型 Web 应用、区块链
-              <b>Web3</b> 应用、<b>Solidity</b> 智能合约、<b>React-Native</b> App、微信小程序、<b>Flutter</b>
-              跨平台App，也有一定的 <b>Nodejs</b> 经验，曾作为10名开发团队技术负责人。
+              拥有 9 年 Web 与移动端开发经验，精通 React、Vue
+              等现代前端技术，具备复杂业务场景下的组件设计与性能优化能力，同时专注于 Flutter
+              和React-Native跨平台移动应用开发，主导多个企业级 App 和 Web项目的开发，具备从前端 Web
+              到跨平台移动端的全栈交付能力，能独立完成产品从架构设计到上线运维的全流程。
             </p>
           </div>
         </div>
@@ -661,12 +673,44 @@
         </div>
         <ol class="work-exp_group">
           <li class="work-exp_list">
-            <p class="exp-list_time">2023.02-2023-09</p>
+            <p class="exp-list_time">2023.12-至今</p>
+            <div class="exp-list_top">
+              <img src="../fameex.jpg" alt="Logo" />
+              <div class="exp-list_right">
+                <strong class="exp-list_title">
+                  <span>FameEX (迪拜)</span>
+                  /
+                  <span>研发部</span>
+                </strong>
+                <p>资深前端开发工程师</p>
+              </div>
+            </div>
+            <div class="tagboard">
+              <span class="tagboard-tag">React</span>
+              <span class="tagboard-tag">Zustand</span>
+              <span class="tagboard-tag">NextJS</span>
+              <span class="tagboard-tag">Typescript</span>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 负责
+                FameEX交易所现货业务开发，包括现货行情，K线图，订单薄，现货下单，现货持仓订单等核心模块，开发高性能和可复用组件。
+              </p>
+              <p>2. 负责合约业务重构和开发，包括合约行情，K线图，订单薄，合约下单，合约持仓订单等核心模块。</p>
+              <p>3. 负责登录注册业务模块重构和页面开发，修复和解耦业务逻辑问题。</p>
+              <p>4. 负责合约跟单业务开发，包括跟单广场，用户跟单列表，用户跟单持仓等核心模块。</p>
+              <p>5. 负责交易所前端页面渲染性能提升和即时通信性能优化，前端缓存优化，提高交易页面性能和响应速度。</p>
+            </div>
+          </li>
+          <li class="work-exp_list">
+            <p class="exp-list_time">2023.01-2023-09</p>
             <div class="exp-list_top">
               <img src="../sender.png" alt="Logo" />
               <div class="exp-list_right">
                 <strong class="exp-list_title">
                   <span>Sender Wallet</span>
+                  /
+                  <span>全职远程</span>
                 </strong>
                 <p>资深软件开发工程师</p>
               </div>
@@ -678,16 +722,15 @@
               <span class="tagboard-tag">Chrome Extension</span>
             </div>
             <div class="exp-list_content">
-              <p>1. 负责 Sender 多链钱包插件端业务开发，包括 EVM 链功能开发，Ton 链功能开发和 Near 链功能开发。</p>
+              <p>1. 负责多链钱包插件端业务开发，包括 EVM、Ton、Near及Layer2链功能开发。</p>
               <p>
-                2. 负责 Sender 插件端 Dapp 功能开发，包括 Ethereum Provdier 和 Near Provider API 设计与开发，为第三方
-                Dapp 提供钱包接入 API 和 开发文档。
+                2. 负责Ethereum Provider 和 Near Provider API 设计与开发，为第三方 Dapp 提供钱包接入 API 和 开发文档。
               </p>
               <p>3. 为 Near 钱包开源项目 wallet-selector 贡献代码，根据 Near API 标准开发 Sender Wallet API。</p>
               <p>4. 迭代 Ledger和 Keystone 硬件钱包功能到 Sender 插件，提高插件钱包功能安全性和可维护性。</p>
               <p>
-                5. 负责用户钱包资产管理网站 Portfolio 开发，对接用户多链资产余额，对接 Lido API 开发资产质押功能，对接
-                Dodo API 开发资产兑换功能。
+                5. 负责用户钱包资产管理网站 Portfolio 开发，对接 Lido API 开发资产质押功能，对接 Dodo API
+                开发资产兑换功能。
               </p>
               <p>
                 6. 负责 Sender 多链钱包移动端业务开发，包括 Ton 链功能对接，开发 Ton 生态质押功能，为 Ton 生态 Dapp 提供
@@ -716,12 +759,12 @@
             </div>
             <div class="exp-list_content">
               <p>
-                1. 作为大型前端团队的资深软件开发工程师，负责 crypto.com
-                交易所核心功能开发，包括会员邀请数据报表、用户安全认证模块等。
+                1.
+                作为大型前端团队的资深软件开发工程师，负责交易所核心功能开发，包括会员邀请数据报表、用户安全认证模块等。
               </p>
               <p>
-                2. 与后端开发人员集成 Yubikey Webauthn 到交易所用户安全认证模块，并集成 Yubikey Web 应用到 Android 和
-                iOS 应用，提高用户交易的安全性。
+                2. 集成 Yubikey Webauthn 到交易所用户安全认证模块，并集成 Yubikey Web 到 Android 和 iOS
+                应用，提高用户交易的安全性。
               </p>
               <p>
                 3. 将组件集成到 UI 组件库 X-UI，集成界面开发者工具，提高开发人员开发和调试效率，开发 UI
@@ -746,7 +789,7 @@
                   ／
                   <span>平台研发部</span>
                 </strong>
-                <p>大前端组长</p>
+                <p>大前端负责人</p>
               </div>
             </div>
             <div class="tagboard">
@@ -758,29 +801,23 @@
               <span class="tagboard-tag">Typescript</span>
             </div>
             <div class="exp-list_content">
+              <p>1. 作为大前端技术团队的负责人，负责 Web 端、小程序、Flutter 移动端跨平台项目管理和技术研发。</p>
               <p>
-                1. 作为大前端技术团队的负责人，负责 Web 端、小程序、Flutter
-                App的项目管理和研发，负责移动端跨平台技术研发、项目管理、工程化和自动化部署。
+                2.
+                团队管理，任务安排与调度，跟进前端项目开发进度，改善前端工作流程和产品体验，并制定合适的技术解决方案。
               </p>
               <p>
-                2. 团队管理，任务安排与调度，跟进前端项目开发进度，改善前端工作流程和产品体验，参与产品需求、交互和
-                设计讨论，并制定合适的解决方案。
-              </p>
-              <p>
-                3. 团队建设，团队内部定期举行技术分享会，营造团队工程师文化氛围，
+                3. 团队建设，定期举行技术分享会，营造团队工程师文化氛围，
                 定期进行团队技术培训，提升团队技术水平和研发能力。
               </p>
+              <p>4. 负责前端机器人大屏监控，机器人远程控制技术研发，并使用 D3、ThreeJS 等开发可视化图形编辑工具。</p>
               <p>
-                4. 负责前端机器人大屏监控，机器人远程控制，以及架构设计和技术研发，并使用 D3、fabricJS、ThreeJS
-                等开发可视化图形编辑工具。
-              </p>
-              <p>
-                5. 负责原生 iOS 和 Android 应用的跨平台技术架构设计，结合原生开发技术和 Flutter 跨平台技术混合开发，以
-                解决一套代码的多端复用问题。
+                5. 负责原生 iOS 和 Android 应用的跨平台技术架构设计，参与Flutter
+                跨平台技术开发，解决一套代码的多端复用问题。
               </p>
             </div>
           </li>
-          <!-- <li class="work-exp_list">
+          <li class="work-exp_list">
             <p class="exp-list_time">2018.09-2019.01</p>
             <div class="exp-list_top">
               <img src="../olympus-labs.png" alt="Logo" />
@@ -805,9 +842,9 @@
               <p>3. 将 dapp 与 Metamask 连接起来，构建用户钱包账户和交易数据可视化界面。</p>
               <p>4. 改善前端工作流程和应用体验，参与产品需求、交互和设计讨论，并提供合适的解决方案。</p>
             </div>
-          </li> -->
+          </li>
           <li class="work-exp_list">
-            <p class="exp-list_time">2017.06-2019.01</p>
+            <p class="exp-list_time">2017.06-2018.8</p>
             <div class="exp-list_top">
               <img src="https://www.lgstatic.com/images/logo_default.png" alt="Logo" />
               <div class="exp-list_right">
@@ -829,7 +866,7 @@
               <span class="tagboard-tag">Javascript</span>
             </div>
             <div class="exp-list_content">
-              <p>1. 担任7人前端开发团队技术负责人，负责前端项目技术研发。</p>
+              <p>1. 担任7人前端开发团队技术负责人，负责前端项目技术研发和项目管理。</p>
               <p>2. 团队管理，任务安排与协调，跟进前端项目开发进度，完善技术文档。</p>
               <p>3. 负责美国大型市政前端项目性能优化、前端架构设计和技术选型，负责前端工程和自动部署。</p>
               <p>4. 提升前端工作流程和产品体验，参与产品需求、交互和设计讨论，并制定合适的解决方案。</p>
@@ -838,7 +875,7 @@
           <li class="work-exp_list">
             <p class="exp-list_time">2016.08-2017.06</p>
             <div class="exp-list_top">
-              <img src="https://www.lgstatic.com/i/image/M00/13/24/CgqKkVbmuniACzKPAADYZIWvYYM207.png" alt="Logo" />
+              <img src="../forchange.jpg" alt="Logo" />
               <div class="exp-list_right">
                 <strong class="exp-list_title">
                   <span>风变科技(深圳)有限公司 </span>
@@ -856,14 +893,13 @@
             </div>
             <div class="exp-list_content">
               <p>
-                1. 作为技术团队的核心成员，负责前端开发技术选型、技术架构、
-                前端页面重构、交互逻辑的实现以及前端数据处理，开发渐进式前端页面。
+                1. 负责前端开发技术选型、技术架构、前端页面重构、交互逻辑的实现以及前端数据处理，开发渐进式前端页面。
               </p>
               <p>
-                2. 使用Express Nodejs框架作为中间层开发前端数据接口，使用 Vue
+                2. 使用Express Nodejs框架作为中间层开发前端数据接口，使用Vue
                 前端框架开发图书管理系统，负责前端工程CI/CD。
               </p>
-              <p>3. 负责制定前端发布流程和开发规范，设计微信 WebA pp 多页项目架构和工作流程。</p>
+              <p>3. 负责制定前端发布流程和开发规范，设计微信 WebApp 多页项目架构和工作流程。</p>
             </div>
           </li>
         </ol>
@@ -878,9 +914,35 @@
         <ol class="pro-exp_group">
           <li class="pro-exp_list">
             <p class="exp-list_title">
-              <span class="exp-project_name">Sender Wallet</span>
+              <span class="exp-project_name">FameEX 交易所</span>
             </p>
-            <p class="exp-list_time">2023.02-2023.08</p>
+            <p class="exp-list_time">2023.12-至今</p>
+            <div class="exp-project_des">
+              <p>
+                FameEX 交易所是一家新兴的全球加密资产交易所，为加密用户提供安全、简单的加密货币衍生品和现货交易服务。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>
+                1. 使用 React, Typescript 和 NextJS 开发交易所核心业务，包括通用组件开发，核心业务页面和业务逻辑开发。
+              </p>
+              <p>
+                2. 负责现货和合约业务K线图行情模块，利用 TradingView 开发高性能K线图组件，提高前端K线图及时性和可用性。
+              </p>
+              <p>
+                3. 负责现货和合约业务订单薄组件开发，利用 Websocket
+                技术开发及时响应的订单薄列表，并提升组件渲染性能和响应速度。
+              </p>
+              <p>4. 开发交易所现货和合约下单，最新成交模块，包括限价单，市价单，委托单，止盈止损等核心业务等开发。</p>
+              <p>5. 负责交易所现货持仓列表，历史订单列表，交易列表等业务，提升列表性能和数据响应及时性。</p>
+              <p>6. 解决交易所现货和合约业务跨浏览器兼容性问题，以及移动端平台页面响应式和兼容性问题的处理。</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name">Sender Wallet 钱包</span>
+            </p>
+            <p class="exp-list_time">2023.01-2023.09</p>
             <div class="exp-project_des">
               <p>
                 Sender 是一个基于 near 链, EVM 链和 Ton 链构建的浏览器扩展钱包和移动端钱包，其目标是为 DeFi 和 NFT
@@ -893,8 +955,8 @@
               <p>3. 将 Ledger 和 Keystone 硬件钱包集成到 Sender 钱包，提升帐户交易安全性。</p>
               <p>4. 负责钱包插件端跨浏览器兼容性问题，以及移动端钱包跨平台兼容性问题的处理。</p>
               <p>
-                5. 负责 Sender 移动端钱包 Ton 链的接入，开发 Ton 代币转账收款功能，Ton NFT 资产转账功能，Ton
-                钱包账号创建功能，以及Ton 生态 Dapp API的开发。
+                5. 负责移动端钱包 Ton 链的接入，包括Ton 代币转账收款、NFT资产转账、钱包账号创建以及Ton 生态 Dapp
+                API的开发。
               </p>
             </div>
           </li>
@@ -932,14 +994,33 @@
             </div>
             <div class="exp-list_content">
               <p>
-                1. 用 React 和 Typescript 技术栈从零搭建后台管理系统的基础技术架构，制定前端开发、UI组件库、Jest
-                单元测试及 Git Workflow 规范。
+                1. 用 React 和 Typescript 技术栈搭建基础技术架构，制定前端开发、UI组件库、Jest 单元测试及 Git Workflow
+                规范。
               </p>
               <p>
-                2. 负责业务管理平台相关核心模块的技术研发，包括大屏数据监控、基于 Websocket
-                的机器人实时监控和控制，以及使用 D3 和 e-chart 构建机器人数据可视化。
+                2. 负责相关核心模块的技术研发，包括大屏数据监控、机器人实时监控和控制，以及使用 D3 和 e-chart
+                构建机器人数据可视化。
               </p>
               <p>3. 为机器人平板应用和 Flutter App 开发版本控制管理系统，提高机器人平板应用部署和测试效率。</p>
+            </div>
+          </li>
+          <li class="pro-exp_list">
+            <p class="exp-list_title">
+              <span class="exp-project_name"> 建图采点工具 Flutter App </span>
+            </p>
+            <p class="exp-list_time">2021.05-2022.04</p>
+            <div class="exp-project_des">
+              <p>
+                建图采点工具是一个用 Flutter
+                开发的跨平台移动端机器人建图采点标记应用，主要核心业务是通过蓝牙连接机器人，
+                获取机器人的采点图形，在App端编辑采点图形和标记关键路径，并同步采点数据至业务平台。
+              </p>
+            </div>
+            <div class="exp-list_content">
+              <p>1. 搭建Flutter基础技术架构, 利用 MVVM 开发模式开发App基础业务。</p>
+              <p>2. 负责楼层图机器人路径标记及路径编辑功能等核心功能的技术开发。</p>
+              <p>3. 利用Canvas图形能力提升路径图编辑性能</p>
+              <p>4. 解决并处理安卓和iOS跨平台兼容性问题。</p>
             </div>
           </li>
           <li class="pro-exp_list">
@@ -958,10 +1039,10 @@
               <p>2. 负责核心业务智能装箱，设备管理等核心业务的技术开发。</p>
               <p>3. 负责 App 应用打包工程化相关业务流程，对接 Fastlane 和 Gradle 打包工具。</p>
               <p>4. 开发了 Flutter 组件模块 cti_services, cti_widgets, cti_utils 等公共组件模块。</p>
-              <p>5. 引入 Redux 状态管理机制到 Flutter 应用，处理安卓和 iOS 跨平台兼容性问题。</p>
+              <p>5. 引入 Redux 状态管理机制到 Flutter 应用，处理安卓和iOS跨平台兼容性问题。</p>
             </div>
           </li>
-          <li class="pro-exp_list">
+          <!--           <li class="pro-exp_list">
             <p class="exp-list_title">
               <span class="exp-project_name">Aurora Company App</span>
             </p>
@@ -999,7 +1080,7 @@
                 6. 制定前端组件Jest测试规范，与团队成员共同编写组件测试用例，提高前端组件测试覆盖率，减少代码错误率。
               </p>
             </div>
-          </li>
+          </li> -->
           <li class="pro-exp_list">
             <p class="exp-list_title">
               <span class="exp-project_name">Eco Web App</span>
@@ -1016,19 +1097,15 @@
               </p>
             </div>
             <div class="exp-list_content">
-              <p>1. 作为前端技术负责人，设计和搭建前端技术基础设施，带领 5名前端成员协同开发，制定合理的开发任务。</p>
+              <p>1. 作为前端技术负责人，设计和搭建前端技术基础设施，带领5名前端成员协同开发，制定合理的开发任务。</p>
               <p>
-                2. 编写比较通用的前端开发标准，在 Jira 上给团队成员分配任务，审查成员代码，
-                控制前端开发进度，实现敏捷项目开发。
+                2. 制定前端开发标准，在 Jira 上给团队成员分配任务，审查成员代码，控制前端开发进度，实现敏捷项目开发。
               </p>
               <p>
-                3. 项目中使用的技术栈包括 React, Redux, React-router, Recompose, Redux-saga, Flow 和
-                Semantic-ui-react等，并利用上述技术栈构建稳定高效的前端技术架构，设计和开发可重用的前端基础组件。
+                3. 项目中使用的技术栈包括 React, Redux, Redux-saga,
+                Flow等，并构建稳定高效的技术架构，设计和开发前端基础组件。
               </p>
-              <p>
-                4. 使用 Webpack 实现一系列的工程开发，包括压缩打包前端资源文件，前端 CSS 样式文件的生成与合并，前端 JS
-                代码分割和异步加载，并使用 CDN 缓存服务来提高 Web 性能和 Web 应用程序的体验。
-              </p>
+              <p>4. 使用 Webpack 实现一系列的工程开发，并使用 CDN 缓存服务来提高 Web 性能和体验。</p>
               <p>5. 使用 Jest 测试工具搭建前端测试环境，为组件编写完整的单元测试用例，提高组件质量和测试覆盖率。</p>
             </div>
           </li>
@@ -1061,7 +1138,7 @@
             </div>
           </li>
           <li class="edu-exp_list">
-            <p class="exp-list_time">CET-6</p>
+            <p class="exp-list_time">CET-6 / Fluent</p>
             <div class="exp-list_top">
               <div class="exp-list_right">
                 <strong>英语</strong>
